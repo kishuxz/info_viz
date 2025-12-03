@@ -1,0 +1,52 @@
+from,to,edge_type,event_id,event_date,weight,connection_type,description
+org_city_schools_district,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_city_schools_district,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_city_schools_district,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_community_care,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_community_care,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_community_care,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_healthfirst_clinic,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_healthfirst_clinic,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_healthfirst_clinic,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_iit_bombay,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_iit_bombay,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_iit_bombay,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_metro_tech_hub,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_metro_tech_hub,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_metro_tech_hub,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_neighborhood_center,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_neighborhood_center,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_neighborhood_center,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_quantiphi,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_quantiphi,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_quantiphi,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_tata_consultancy_services,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_tata_consultancy_services,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_tata_consultancy_services,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_urban_youth_alliance,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_urban_youth_alliance,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_urban_youth_alliance,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_youth_sports_league,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
+org_youth_sports_league,evt_evt_2025_002,attendance,EVT-2025-002,2025-07-20,1,,
+org_youth_sports_league,evt_evt_2025_003,attendance,EVT-2025-003,2025-10-05,1,,
+org_city_schools_district,org_quantiphi,connection,EVT-2025-001,2025-03-15,1,Collaboration,Discussed projects at Tutor/Mentor Spring Conference 2025
+org_city_schools_district,org_quantiphi,connection,EVT-2025-002,2025-07-20,1,Collaboration,Discussed projects at Tutor/Mentor Summer Meetup 2025
+org_city_schools_district,org_quantiphi,connection,EVT-2025-003,2025-10-05,1,Collaboration,Discussed projects at Tutor/Mentor Fall Summit 2025
+org_community_care,org_quantiphi,connection,EVT-2025-001,2025-03-15,1,Collaboration,Discussed projects at Tutor/Mentor Spring Conference 2025
+org_community_care,org_quantiphi,connection,EVT-2025-002,2025-07-20,1,Collaboration,Discussed projects at Tutor/Mentor Summer Meetup 2025
+org_community_care,org_quantiphi,connection,EVT-2025-003,2025-10-05,1,Collaboration,Discussed projects at Tutor/Mentor Fall Summit 2025
+org_iit_bombay,org_community_care,connection,EVT-2025-001,2025-03-15,1,Networking,Met during Tutor/Mentor Spring Conference 2025
+org_iit_bombay,org_community_care,connection,EVT-2025-002,2025-07-20,1,Networking,Met during Tutor/Mentor Summer Meetup 2025
+org_iit_bombay,org_community_care,connection,EVT-2025-003,2025-10-05,1,Networking,Met during Tutor/Mentor Fall Summit 2025
+org_metro_tech_hub,org_quantiphi,connection,EVT-2025-001,2025-03-15,1,Collaboration,Discussed projects at Tutor/Mentor Spring Conference 2025
+org_metro_tech_hub,org_quantiphi,connection,EVT-2025-002,2025-07-20,1,Collaboration,Discussed projects at Tutor/Mentor Summer Meetup 2025
+org_metro_tech_hub,org_quantiphi,connection,EVT-2025-003,2025-10-05,1,Collaboration,Discussed projects at Tutor/Mentor Fall Summit 2025
+org_quantiphi,org_community_care,connection,EVT-2025-001,2025-03-15,1,Networking,Met during Tutor/Mentor Spring Conference 2025
+org_quantiphi,org_community_care,connection,EVT-2025-002,2025-07-20,1,Networking,Met during Tutor/Mentor Summer Meetup 2025
+org_quantiphi,org_community_care,connection,EVT-2025-003,2025-10-05,1,Networking,Met during Tutor/Mentor Fall Summit 2025
+org_tata_consultancy_services,org_community_care,connection,EVT-2025-001,2025-03-15,1,Networking,Met during Tutor/Mentor Spring Conference 2025
+org_tata_consultancy_services,org_community_care,connection,EVT-2025-002,2025-07-20,1,Networking,Met during Tutor/Mentor Summer Meetup 2025
+org_tata_consultancy_services,org_community_care,connection,EVT-2025-003,2025-10-05,1,Networking,Met during Tutor/Mentor Fall Summit 2025
+org_youth_sports_league,org_quantiphi,connection,EVT-2025-001,2025-03-15,1,Collaboration,Discussed projects at Tutor/Mentor Spring Conference 2025
+org_youth_sports_league,org_quantiphi,connection,EVT-2025-002,2025-07-20,1,Collaboration,Discussed projects at Tutor/Mentor Summer Meetup 2025
+org_youth_sports_league,org_quantiphi,connection,EVT-2025-003,2025-10-05,1,Collaboration,Discussed projects at Tutor/Mentor Fall Summit 2025
