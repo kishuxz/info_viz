@@ -2,8 +2,14 @@
 
 # dependencies
 /node_modules
+/backend/node_modules
 /.pnp
 .pnp.js
+
+# environment files
+.env
+backend/.env
+.env.production
 
 # testing
 /coverage
