@@ -37,38 +37,7 @@ const CHART_COLORS = [
     "#0dcaf0",
 ];
 
-// Renders X-axis labels on multiple lines if they’re too long
-const MultiLineTick = ({ x, y, payload, maxChars = 12 }) => {
-    const value = (payload.value || "").toString();
-
-    // naive word wrap by characters
-    const words = value.split(" ");
-    const lines = [];
-    let current = "";
-
-    words.forEach((word) => {
-        const test = current ? `${current} ${word}` : word;
-        if (test.length > maxChars) {
-            if (current) lines.push(current);
-            current = word;
-        } else {
-            current = test;
-        }
-    });
-    if (current) lines.push(current);
-
-    return (
-        <g transform={`translate(${x},${y})`}>
-            <text x={0} y={0} textAnchor="middle" fill="#666">
-                {lines.map((line, idx) => (
-                    <tspan key={idx} x={0} dy={idx === 0 ? 0 : 12}>
-                        {line}
-                    </tspan>
-                ))}
-            </text>
-        </g>
-    );
-};
+// MultiLineTick component removed - unused
 
 const MAX_TABLE_CELL_CHARS = 80;
 
@@ -602,8 +571,8 @@ function AnalyticsDashboard() {
                                                 <div
                                                     key={f.id}
                                                     className={`position-relative p-3 mb-2 rounded-4 border border-3 ${isActive
-                                                            ? "bg-primary text-white border-primary shadow-sm"
-                                                            : "bg-white border-light"
+                                                        ? "bg-primary text-white border-primary shadow-sm"
+                                                        : "bg-white border-light"
                                                         }`}
                                                     style={{
                                                         cursor: "pointer",
@@ -637,8 +606,8 @@ function AnalyticsDashboard() {
                                                         </div>
                                                         <span
                                                             className={`badge rounded-pill ${isActive
-                                                                    ? "bg-light text-primary"
-                                                                    : "bg-primary-subtle text-primary"
+                                                                ? "bg-light text-primary"
+                                                                : "bg-primary-subtle text-primary"
                                                                 }`}
                                                         >
                                                             {f.id}

@@ -8,7 +8,6 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLearnDropdownOpen, setIsLearnDropdownOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [adminName, setAdminName] = useState('');
 
   // Check authentication status using authService
   useEffect(() => {

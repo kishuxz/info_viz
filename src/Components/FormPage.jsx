@@ -213,15 +213,7 @@ function DynamicForm() {
         });
     };
 
-    const getCountryName = (iso) => {
-        const c = allCountries.find((c) => c.isoCode === iso);
-        return c ? c.name : "";
-    };
-
-    const getStateName = (iso) => {
-        const s = availableStates.find((s) => s.isoCode === iso);
-        return s ? s.name : "";
-    };
+    // Removed unused getCountryName and getStateName helper functions
 
     const handleCountrySelect = (isoCode) => {
         const country = allCountries.find(c => c.isoCode === isoCode);

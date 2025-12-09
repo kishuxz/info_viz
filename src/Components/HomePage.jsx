@@ -125,38 +125,7 @@ function HomePage() {
   }, []);
 
 
-
-
-  const features = [
-    {
-      label: "Nature",
-      title: "Organic Growth",
-      description: "Visualize the organic growth of your community network.",
-      list: ["Natural patterns", "Growth visualization"],
-      image: "/assets/slider-leaf.png"
-    },
-    {
-      label: "Community Intelligence",
-      title: "Visualize Your Network",
-      description: "Transform raw survey data into interactive graphs. Identify key influencers, bridges, and clusters within your community instantly.",
-      list: ["Real-time rendering", "Interactive node exploration", "Cluster identification"],
-      image: "/assets/slider-graph.png"
-    },
-    {
-      label: "Data Driven",
-      title: "Deep Analytics",
-      description: "Go beyond simple visualization. Our analytics engine calculates centrality measures, density, and other key metrics to give you actionable insights.",
-      list: ["Degree & Betweenness Centrality", "Community Detection", "Exportable Reports"],
-      image: "/assets/analytics-preview.png"
-    },
-    {
-      label: "Context Aware",
-      title: "Rich Metadata",
-      description: "Overlay rich metadata on your network. Filter by attributes, color-code by category, and explore the hidden structure of your data.",
-      list: ["Attribute filtering", "Dynamic coloring", "Metadata tooltips"],
-      image: "/assets/hero-preview.png"
-    }
-  ];
+  // Previously had a features array here that was unused
 
   // Sticky scroll logic removed for static layout
 

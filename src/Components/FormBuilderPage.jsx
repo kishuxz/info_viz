@@ -295,10 +295,7 @@ function FormBuilderPage() {
     return label.includes(searchTerm.toLowerCase());
   });
 
-  // currently unused but kept (no functionality change)
-  const totalForms = adminForms.length;
-  const totalExtraFields = extraFields.length;
-  const totalPreviewRows = previewRows.length;
+  // Removed unused variables: totalForms, totalExtraFields, totalPreviewRows
 
   return (
     <div className="analytics-dashboard admin-page">

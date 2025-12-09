@@ -1,7 +1,7 @@
 // src/components/UploadPanel.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { getFormsForAdmin, getResponses } from "../api";
+import { getFormsForAdmin } from "../api";
 import "./UploadPanel.css";
 
 export default function UploadPanel() {
