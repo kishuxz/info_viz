@@ -6,9 +6,10 @@
 /.pnp
 .pnp.js
 
-# environment files
+# CRITICAL: Never commit these files!
 .env
 backend/.env
+.env.local
 .env.production
 
 # testing
