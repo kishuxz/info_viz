@@ -13,19 +13,15 @@ export default function Navbar() {
   useEffect(() => {
     const updateAuthState = () => {
       const authenticated = authService.isAuthenticated();
-      const user = authService.getUser();
-
       setIsLoggedIn(authenticated);
-      setAdminName(user?.name || '');
     };
 
     // Initial check
     updateAuthState();
 
     // Listen for auth state changes
-    const unsubscribe = authService.onAuthStateChange((isAuth, user) => {
+    const unsubscribe = authService.onAuthStateChange((isAuth) => {
       setIsLoggedIn(isAuth);
-      setAdminName(user?.name || '');
     });
 
     return () => {
@@ -40,7 +36,6 @@ export default function Navbar() {
   const handleLogout = async () => {
     await authService.logout();
     setIsLoggedIn(false);
-    setAdminName('');
     navigate('/');
   };
 
