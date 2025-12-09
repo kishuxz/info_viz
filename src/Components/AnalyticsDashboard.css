@@ -1,0 +1,501 @@
+/* AnalyticsDashboard.css - Extracted from App.css */
+
+/* Root container */
+.analytics-dashboard {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    color: #111827;
+    background: #ffffff;
+}
+
+/* Page title */
+.analytics-dashboard h3 {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Cards & panels */
+.analytics-dashboard .card {
+    border-radius: 24px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    background: #ffffff;
+}
+
+.analytics-dashboard .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    border-color: #2563eb;
+}
+
+/* Card titles */
+.analytics-dashboard .card-title {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* Hero section - clean white background */
+.analytics-dashboard .analytics-hero {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 2rem 1rem;
+}
+
+.analytics-dashboard .analytics-hero-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #6b7280;
+    text-transform: uppercase;
+}
+
+.analytics-dashboard .analytics-hero-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.analytics-dashboard .analytics-hero-subtitle {
+    font-size: 15px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.analytics-dashboard .analytics-hero-cta {
+    border-radius: 999px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* Light "inner" panels (metrics, charts) */
+.analytics-dashboard .border.rounded-3.bg-light {
+    background: linear-gradient(135deg, #f9fafb 0, #f3f4f6 40%, #ffffff 100%);
+    border-color: rgba(148, 163, 184, 0.35) !important;
+}
+
+/* Sidebar: forms list */
+.analytics-dashboard .list-group-item {
+    border: 0;
+    margin-bottom: 6px;
+    border-radius: 10px !important;
+    background: #f9fafb;
+    color: #111827;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    transition: background 0.12s ease, box-shadow 0.12s ease,
+        transform 0.12s ease;
+}
+
+.analytics-dashboard .list-group-item:hover {
+    background: #e5edff;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    transform: translateY(-1px);
+}
+
+.analytics-dashboard .list-group-item.bg-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+}
+
+.analytics-dashboard .list-group-item.bg-primary .fw-semibold,
+.analytics-dashboard .list-group-item.bg-primary .small,
+.analytics-dashboard .list-group-item.bg-primary .badge {
+    color: #ffffff !important;
+}
+
+.analytics-dashboard .list-group-item .fw-semibold {
+    font-size: 0.95rem;
+}
+
+/* Badge that shows form id */
+.analytics-dashboard .list-group-item .badge {
+    font-weight: 600;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+}
+
+/* Upload + Convert panels */
+.analytics-dashboard input[type="file"].form-control-sm {
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+}
+
+.analytics-dashboard .form-select.form-select-sm {
+    border-radius: 999px;
+}
+
+/* Convert section button */
+.analytics-dashboard .btn.btn-sm.btn-primary {
+    border-radius: 999px;
+    padding: 10px 24px;
+    font-weight: 600;
+    background: #000000;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analytics-dashboard .btn.btn-sm.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background: #1f2937;
+}
+
+/* Metrics row */
+.analytics-dashboard .fs-4.fw-semibold {
+    font-weight: 700 !important;
+}
+
+.analytics-dashboard .border.rounded-3.p-3.bg-light.h-100 {
+    position: relative;
+    overflow: hidden;
+}
+
+.analytics-dashboard .border.rounded-3.p-3.bg-light.h-100::after {
+    content: "";
+    position: absolute;
+    inset: auto -40px -40px auto;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.12), transparent);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Charts */
+.analytics-dashboard .chart-container {
+    min-height: 260px;
+}
+
+.recharts-default-tooltip {
+    font-size: 0.8rem;
+    border-radius: 10px !important;
+    border-color: rgba(148, 163, 184, 0.6) !important;
+}
+
+/* Y-axis label styling */
+.analytics-dashboard .recharts-cartesian-axis-tick text {
+    font-size: 0.75rem;
+    fill: #4b5563;
+}
+
+/* Connections badge */
+.analytics-dashboard .badge.bg-secondary {
+    background: linear-gradient(135deg, #4b5563, #1f2933) !important;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+/* Data table */
+.analytics-dashboard .table-responsive {
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    overflow: auto;
+    background: #ffffff;
+}
+
+/* Sticky table header */
+.analytics-dashboard .table thead th {
+    position: sticky;
+    top: 0;
+    background: #f3f4f6;
+    z-index: 2;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+}
+
+/* Row style */
+.analytics-dashboard .table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.analytics-dashboard .table tbody tr:hover {
+    background-color: #e5edff;
+}
+
+/* Cells */
+.analytics-dashboard .table tbody td {
+    font-size: 0.8rem;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* Ellipsis helpers (scoped) */
+.analytics-dashboard .table-cell-single-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.analytics-dashboard .table-cell-ellipsis {
+    max-width: 260px;
+}
+
+/* Scrollbar Styling (WebKit) */
+.analytics-dashboard .table-responsive::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.analytics-dashboard .table-responsive::-webkit-scrollbar-track {
+    background: #e5e7eb;
+    border-radius: 999px;
+}
+
+.analytics-dashboard .table-responsive::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 999px;
+}
+
+.analytics-dashboard .table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* Alerts & badges */
+.analytics-dashboard .alert-info {
+    border-radius: 999px;
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #1d4ed8;
+}
+
+.analytics-dashboard .alert-danger {
+    border-radius: 12px;
+}
+
+/* "Using uploaded CSV" badge */
+.analytics-dashboard .badge.bg-success {
+    border-radius: 999px;
+    padding-inline: 0.75rem;
+}
+
+/* Inputs */
+.analytics-dashboard .form-control.form-control-sm {
+    border-radius: 999px;
+    border-color: #d1d5db;
+    box-shadow: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.analytics-dashboard .form-control.form-control-sm:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+
+/* Small-screen tweaks */
+@media (max-width: 991.98px) {
+    .analytics-dashboard .card {
+        border-radius: 14px;
+    }
+
+    .analytics-dashboard .border.rounded-3.p-3.bg-light.h-100::after {
+        display: none;
+    }
+
+    .analytics-dashboard .table-responsive {
+        max-height: 280px;
+    }
+}
+
+/* Remove black focus box around Recharts SVGs */
+.chart-container,
+.chart-container * {
+    outline: none !important;
+}
+
+/* Long JSON-ish columns like `connections` */
+.table-cell-ellipsis {
+    max-width: 320px;
+    min-width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.table-cell-single-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =====================================================
+   FORM BUILDER PAGE ENHANCEMENTS
+===================================================== */
+
+/* Primary action buttons - pill-shaped with black background */
+.analytics-dashboard .btn-primary,
+.analytics-dashboard .btn.btn-primary {
+    background: #000000;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 32px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.analytics-dashboard .btn-primary:hover,
+.analytics-dashboard .btn.btn-primary:hover {
+    background: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Secondary/Outline buttons */
+.analytics-dashboard .btn-outline-primary {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    background: transparent;
+    border-radius: 999px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.analytics-dashboard .btn-outline-primary:hover {
+    background: #2563eb;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Success buttons (like Add field button) */
+.analytics-dashboard .btn-success {
+    background: #10b981;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+    transition: all 0.2s ease;
+}
+
+.analytics-dashboard .btn-success:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+}
+
+/* Form inputs in Form Builder */
+.analytics-dashboard .form-control,
+.analytics-dashboard .form-select {
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 10px 14px;
+    transition: all 0.2s ease;
+}
+
+.analytics-dashboard .form-control:focus,
+.analytics-dashboard .form-select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    outline: none;
+}
+
+/* Badge enhancements */
+.analytics-dashboard .badge.rounded-pill {
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+/* Event details panel */
+.analytics-dashboard .border.rounded-4.bg-light {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 16px !important;
+}
+
+/* Table styling for extra fields */
+.analytics-dashboard .table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.analytics-dashboard .table thead {
+    background: #f3f4f6;
+}
+
+.analytics-dashboard .table th {
+    font-weight: 600;
+    font-size: 13px;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 16px;
+}
+
+.analytics-dashboard .table td {
+    padding: 12px 16px;
+    vertical-align: middle;
+}
+
+.analytics-dashboard .table tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* Section number badges */
+.analytics-dashboard .badge.bg-primary-subtle {
+    background: #eff6ff !important;
+    color: #2563eb !important;
+    font-weight: 700;
+}
+
+/* Improve card rounded corners consistency */
+.analytics-dashboard .rounded-4 {
+    border-radius: 20px !important;
+}
+
+/* Empty state styling */
+.analytics-dashboard .text-muted.small {
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+/* Search input */
+.analytics-dashboard .input-group {
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.analytics-dashboard .input-group .input-group-text {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-right: none;
+}
+
+.analytics-dashboard .input-group .form-control {
+    border-left: none;
+}
+
+/* Improve form list items */
+.analytics-dashboard .border-3 {
+    border-width: 2px !important;
+}
+
+/* Alert messages */
+.analytics-dashboard .alert {
+    border-radius: 12px;
+    border: none;
+}
+
+.analytics-dashboard .alert-success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.analytics-dashboard .alert-warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.analytics-dashboard .alert-danger {
+    background: #fee2e2;
+    color: #991b1b;
+}

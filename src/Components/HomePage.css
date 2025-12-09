@@ -55,7 +55,7 @@ body {
   min-height: auto;
   background: #ffffff;
   color: #111827;
-  padding: 180px 24px 80px;
+  padding: 180px 24px 220px;
   margin-bottom: 60px;
   display: flex;
   justify-content: center;
@@ -126,10 +126,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 180%;
   pointer-events: none;
   z-index: 0;
   opacity: 1;
+  mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
 }
 
 .hero-subtitle {
@@ -210,6 +212,127 @@ body {
   height: 100%;
   display: block;
 }
+
+/* =====================================================
+   STANDALONE DEMO SECTION
+===================================================== */
+.standalone-demo-section {
+  width: 100%;
+  padding: 100px 24px 120px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  margin-top: 80px;
+}
+
+.demo-content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.demo-main-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 16px;
+  letter-spacing: -1.5px;
+}
+
+.demo-main-subtitle {
+  font-size: 20px;
+  color: #6b7280;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.standalone-demo-section .demo-video-container {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.standalone-demo-section .video-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: none;
+  border: 2px solid #e5e7eb;
+  background: #000000;
+  outline: none;
+  /* Force no filters or effects */
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  isolation: isolate;
+}
+
+.standalone-demo-section .demo-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border: none;
+  outline: none;
+  /* Performance optimizations for smooth playback */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  image-rendering: auto;
+}
+
+.demo-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.btn-view-examples {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 18px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-view-examples:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn-view-examples svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-view-examples:hover svg {
+  transform: translateY(3px);
+}
+
+/* Responsive adjustments for demo section */
+@media (max-width: 768px) {
+  .demo-main-title {
+    font-size: 36px;
+  }
+
+  .demo-main-subtitle {
+    font-size: 18px;
+  }
+
+  .standalone-demo-section {
+    padding: 60px 24px 80px;
+  }
+}
+
 
 /* =========================================
    SHOWCASE SECTION (Static Features)
@@ -415,32 +538,39 @@ body {
   line-height: 1.6;
 }
 
-/* Circular Buttons */
-.analytics-buttons {
-  display: flex;
-  gap: 20px;
+/* CTA Button for Analytics */
+.analytics-cta {
   margin-top: 40px;
 }
 
-.circle-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid #374151;
-  color: #d1d5db;
-  display: flex;
+.btn-analytics-primary {
+  background: #ffffff;
+  color: #0f172a;
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
 
-.circle-btn:hover {
-  border-color: #ffffff;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
+.btn-analytics-primary:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-analytics-primary svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-analytics-primary:hover svg {
+  transform: translateX(3px);
 }
 
 /* Graph Container */
@@ -597,5 +727,330 @@ body {
 .how-card p {
   color: #4b5563;
   line-height: 1.6;
+  font-size: 15px;
+}
+
+/* =====================================================
+   DEMO VIDEO SECTION
+===================================================== */
+.demo-video-container {
+  max-width: 1100px;
+  margin: 60px auto 0;
+  text-align: center;
+}
+
+.demo-subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  background: #000000;
+}
+
+.demo-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.demo-description {
+  max-width: 800px;
+  margin: 24px auto 0;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   NETWORK EXAMPLES SECTION - REFERENCE DESIGN
+===================================================== */
+.examples-section {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.examples-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.examples-subtitle {
+  color: #6b7280;
+  font-size: 18px;
+  margin-bottom: 48px;
+}
+
+.examples-slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.examples-slider {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 0 60px;
+}
+
+.examples-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.example-card-wrapper {
+  flex: 0 0 calc(50% - 20px);
+  min-width: 450px;
+}
+
+@media (max-width: 968px) {
+  .example-card-wrapper {
+    flex: 0 0 calc(100% - 48px);
+    min-width: 320px;
+  }
+}
+
+.example-showcase-card {
+  background: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.example-showcase-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.example-showcase-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.example-showcase-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.example-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.example-overlay-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Details - Outside the card */
+.example-card-details {
+  padding: 24px 0 0 0;
+  text-align: left;
+}
+
+.example-detail-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.example-detail-desc {
+  color: #4b5563;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.example-link {
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.example-link:hover {
+  color: #1d4ed8;
+}
+
+/* Navigation Controls - Left-aligned with first card */
+.slider-controls {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 24px;
+  padding-left: 0;
+}
+
+.slider-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .slider-controls {
+    justify-content: center;
+  }
+}
+
+/* Slider Indicators - Grouped with arrows */
+.slider-indicators {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 16px;
+  padding-left: 0;
+}
+
+.slider-indicators .indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-indicators .indicator.active {
+  background: #2563eb;
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .slider-indicators {
+    justify-content: center;
+  }
+}
+
+/* =====================================================
+   FAQ SECTION
+===================================================== */
+.faq-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.faq-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+  transform: translateY(-8px);
+}
+
+.faq-card:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.faq-icon {
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.faq-card:hover .faq-icon {
+  background: #2563eb;
+  color: #ffffff;
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.faq-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.faq-card p {
+  color: #4b5563;
+  line-height: 1.7;
   font-size: 15px;
 }

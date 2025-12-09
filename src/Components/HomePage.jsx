@@ -7,13 +7,7 @@ import useParallaxTilt from "../hooks/useParallaxTilt";
 
 import initNetworkCanvas from "../utils/networkCanvas";
 import initDotCanvas from "../utils/dotCanvas";
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import Footer from "./Footer";
 
 function HomePage() {
   useScrollReveal();
@@ -25,6 +19,7 @@ function HomePage() {
 
   const networkCanvasRef = useRef(null);
   const dotCanvasRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     if (!networkCanvasRef.current) return;
@@ -39,6 +34,93 @@ function HomePage() {
     const cleanup = initDotCanvas(dotCanvasRef.current);
     return () => {
       if (cleanup) cleanup();
+    };
+  }, []);
+
+  // Video playback handler
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const playVideo = async () => {
+      try {
+        await video.play();
+        console.log("Video playing successfully");
+      } catch (error) {
+        console.error("Video autoplay failed:", error);
+        // If autoplay fails, the user can still use controls
+      }
+    };
+
+    video.load(); // Ensure video is loaded
+    playVideo();
+  }, []);
+
+  // Examples slider auto-scroll
+  useEffect(() => {
+    const slider = document.querySelector('.examples-slider');
+    const indicators = document.querySelectorAll('.slider-indicators .indicator');
+    const prevBtn = document.querySelector('.slider-arrow-prev');
+    const nextBtn = document.querySelector('.slider-arrow-next');
+
+    if (!slider || indicators.length === 0) return;
+
+    let currentIndex = 0;
+    let intervalId;
+    let isPaused = false;
+
+    const scrollToIndex = (index) => {
+      const wrappers = slider.querySelectorAll('.example-card-wrapper');
+      if (wrappers.length === 0) return;
+
+      const wrapperWidth = wrappers[0].offsetWidth;
+      const gap = 40;
+      slider.scrollTo({
+        left: (wrapperWidth + gap) * index,
+        behavior: 'smooth'
+      });
+
+      indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === index);
+      });
+
+      currentIndex = index;
+    };
+
+    const autoScroll = () => {
+      if (!isPaused) {
+        currentIndex = (currentIndex + 1) % 3;
+        scrollToIndex(currentIndex);
+      }
+    };
+
+    const handlePrev = () => {
+      const newIndex = (currentIndex - 1 + 3) % 3;
+      scrollToIndex(newIndex);
+    };
+
+    const handleNext = () => {
+      const newIndex = (currentIndex + 1) % 3;
+      scrollToIndex(newIndex);
+    };
+
+    intervalId = setInterval(autoScroll, 5000);
+
+    const handleMouseEnter = () => { isPaused = true; };
+    const handleMouseLeave = () => { isPaused = false; };
+
+    slider.addEventListener('mouseenter', handleMouseEnter);
+    slider.addEventListener('mouseleave', handleMouseLeave);
+
+    if (prevBtn) prevBtn.addEventListener('click', handlePrev);
+    if (nextBtn) nextBtn.addEventListener('click', handleNext);
+
+    return () => {
+      clearInterval(intervalId);
+      slider.removeEventListener('mouseenter', handleMouseEnter);
+      slider.removeEventListener('mouseleave', handleMouseLeave);
+      if (prevBtn) prevBtn.removeEventListener('click', handlePrev);
+      if (nextBtn) nextBtn.removeEventListener('click', handleNext);
     };
   }, []);
 
@@ -109,33 +191,46 @@ function HomePage() {
         </div>
       </section>
 
-      {/* =============== SLIDER SECTION ================= */}
-      <section className="slider-section py-20 bg-white" style={{ marginTop: '150px' }}>
-        <div style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
-          <div style={{ width: '100%', maxWidth: '1024px', padding: '0 24px' }}>
-            <Swiper
-              modules={[Autoplay, Pagination]}
-              spaceBetween={20}
-              slidesPerView={1}
-              pagination={{ clickable: true }}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
+      {/* =============== VIDEO DEMO SECTION ================= */}
+      <section id="workflow-demo" className="standalone-demo-section">
+        <div className="demo-content-wrapper">
+          <h2 className="demo-main-title">See It In Action</h2>
+          <p className="demo-main-subtitle">
+            Watch how the complete workflow transforms your data from forms to network visualizations
+          </p>
+
+          <div className="demo-video-container">
+            <div className="video-wrapper">
+              <video
+                ref={videoRef}
+                src="/assets/demo/workflow-demo.webm"
+                className="demo-video"
+                controls
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <div className="demo-actions">
+            <button
+              className="btn-view-examples"
+              onClick={() => {
+                const examplesSection = document.getElementById('network-examples');
+                if (examplesSection) {
+                  examplesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
               }}
-              loop={true}
-              className="w-full rounded-xl overflow-hidden shadow-xl"
             >
-              {features.map((feature, index) => (
-                <SwiperSlide key={index}>
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className="w-full h-auto"
-                    style={{ display: 'block', maxHeight: '600px', objectFit: 'cover' }}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+              View Network Examples
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ marginLeft: '8px' }}>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -160,11 +255,20 @@ function HomePage() {
                 Use standard Google Forms or Excel templates to gather participant
                 and event data from your community.
               </p>
-              <Link to="/form" style={{ marginTop: '16px', display: 'inline-block' }}>
-                <button className="btn-primary" style={{ padding: '10px 24px', fontSize: '14px' }}>
-                  Go to Form Page →
-                </button>
-              </Link>
+              <button
+                className="btn-primary"
+                style={{ padding: '10px 24px', fontSize: '14px', marginTop: '16px', cursor: 'pointer' }}
+                onClick={() => {
+                  const isLoggedIn = localStorage.getItem('adminId');
+                  if (isLoggedIn) {
+                    window.location.href = '/forms/builder';
+                  } else {
+                    window.location.href = '/signup?returnTo=/forms/builder';
+                  }
+                }}
+              >
+                Go to Form Page →
+              </button>
             </div>
 
             <div className="step-card" data-reveal data-reveal-delay="200">
@@ -209,22 +313,15 @@ function HomePage() {
                 participation patterns and uncover key relationships across events and time.
               </p>
 
-              <div className="analytics-buttons">
-                <button className="circle-btn" aria-label="Charts">
-                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </button>
-                <button className="circle-btn" aria-label="Data">
-                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                  </svg>
-                </button>
-                <button className="circle-btn" aria-label="Export">
-                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </button>
+              <div className="analytics-cta">
+                <Link to="/analytics" style={{ textDecoration: 'none' }}>
+                  <button className="btn-analytics-primary">
+                    View Analytics Dashboard
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ marginLeft: '8px' }}>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -245,69 +342,173 @@ function HomePage() {
           </div>
         </section>
 
-        {/* =============== HOW IT WORKS SECTION ================= */}
+        {/* =============== EXAMPLE NETWORK VISUALIZATIONS ================= */}
         <section className="how-it-works">
-          <div className="section-header" data-reveal>
-            <h2>How It Works</h2>
-            <p>A streamlined workflow for community data.</p>
+          <div id="network-examples" className="examples-section" data-reveal data-reveal-delay="200">
+            <h3 className="examples-title">Example Network Visualizations</h3>
+            <p className="examples-subtitle">
+              See how your data looks when imported into Kumu and Gephi, or explore with our built-in analytics
+            </p>
+
+            <div className="examples-slider-container">
+              <div className="examples-slider">
+                {/* Kumu Card */}
+                <div className="example-card-wrapper">
+                  <div className="example-showcase-card">
+                    <div className="example-showcase-image">
+                      <img
+                        src="/assets/examples/kumu-network-example.png"
+                        alt="Kumu Network Visualization"
+                      />
+                      <div className="example-overlay">
+                        <h4 className="example-overlay-title">Kumu</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="example-card-details">
+                    <h4 className="example-detail-title">Kumu</h4>
+                    <p className="example-detail-desc">
+                      Clean, colorful network maps with clusters showing community structure. Perfect for stakeholder presentations and interactive exploration.
+                    </p>
+                    <a href="/learn/export-guide" className="example-link">
+                      View guide →
+                    </a>
+                  </div>
+                </div>
+
+                {/* Gephi Card */}
+                <div className="example-card-wrapper">
+                  <div className="example-showcase-card">
+                    <div className="example-showcase-image">
+                      <img
+                        src="/assets/examples/gephi-network-example.png"
+                        alt="Gephi Network Visualization"
+                      />
+                      <div className="example-overlay">
+                        <h4 className="example-overlay-title">Gephi</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="example-card-details">
+                    <h4 className="example-detail-title">Gephi</h4>
+                    <p className="example-detail-desc">
+                      Force-directed layouts with advanced analytics. Ideal for academic research and deep network analysis with centrality measures.
+                    </p>
+                    <a href="/learn/export-guide" className="example-link">
+                      View guide →
+                    </a>
+                  </div>
+                </div>
+
+                {/* Analytics Card */}
+                <div className="example-card-wrapper">
+                  <div className="example-showcase-card">
+                    <div className="example-showcase-image">
+                      <img
+                        src="/assets/analytics-preview.png"
+                        alt="Analytics Dashboard"
+                      />
+                      <div className="example-overlay">
+                        <h4 className="example-overlay-title">Analytics</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="example-card-details">
+                    <h4 className="example-detail-title">Built-in Analytics</h4>
+                    <p className="example-detail-desc">
+                      Real-time network metrics and insights dashboard. Explore centrality measures, clustering, and community detection without leaving the platform.
+                    </p>
+                    <a href="/analytics" className="example-link">
+                      View dashboard →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Navigation Controls */}
+              <div className="slider-controls">
+                <button className="slider-arrow slider-arrow-prev" aria-label="Previous">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button className="slider-arrow slider-arrow-next" aria-label="Next">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="slider-indicators">
+                <span className="indicator active"></span>
+                <span className="indicator"></span>
+                <span className="indicator"></span>
+              </div>
+            </div>
           </div>
 
-          <div className="how-grid">
-            <div className="how-card" data-reveal data-reveal-delay="100">
-              <div className="how-icon">
-                <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-              </div>
-              <h3>What is Tutor/Mentor Mapping?</h3>
-              <p>
-                A structured way to track who participates in tutoring and mentoring events, and how
-                people and organizations connect across time.
-              </p>
+          {/* FAQ Section */}
+          <div className="faq-section" style={{ marginTop: '80px' }}>
+            <div className="section-header" data-reveal>
+              <h2>Frequently Asked Questions</h2>
+              <p>Everything you need to know to get started</p>
             </div>
 
-            <div className="how-card" data-reveal data-reveal-delay="200">
-              <div className="how-icon">
-                <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+            <div className="faq-grid">
+              <div className="faq-card" data-reveal data-reveal-delay="100">
+                <div className="faq-icon">
+                  <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <h3>Do I need coding skills?</h3>
+                <p>
+                  No! NetworkMap is designed for non-technical users. Simply upload your forms or spreadsheets, and we'll handle the rest.
+                </p>
               </div>
-              <h3>Who Will Use This?</h3>
-              <p>
-                Nonprofits, researchers, educators, and coordinators looking for clarity on
-                community engagement.
-              </p>
-            </div>
 
-            <div className="how-card" data-reveal data-reveal-delay="300">
-              <div className="how-icon">
-                <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div className="faq-card" data-reveal data-reveal-delay="200">
+                <div className="faq-icon">
+                  <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h3>What formats are supported?</h3>
+                <p>
+                  We support CSV, Excel (XLSX), and Google Sheets. You can also use our built-in form builder to collect data directly.
+                </p>
               </div>
-              <h3>What Will They Get?</h3>
-              <p>
-                Clean datasets, visual dashboards, and exportable files for tools like Gephi or
-                Kumu.
-              </p>
-            </div>
 
-            <div className="how-card" data-reveal data-reveal-delay="400">
-              <div className="how-icon">
-                <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+              <div className="faq-card" data-reveal data-reveal-delay="300">
+                <div className="faq-icon">
+                  <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h3>Is my data secure?</h3>
+                <p>
+                  Yes! All data is stored securely in your own database. This is an open-source tool you can self-host for complete control.
+                </p>
               </div>
-              <h3>How It Works</h3>
-              <p>
-                Upload files → transform to nodes/edges → explore interactive visualizations and
-                analytics.
-              </p>
+
+              <div className="faq-card" data-reveal data-reveal-delay="400">
+                <div className="faq-icon">
+                  <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                  </svg>
+                </div>
+                <h3>Can I export my visualizations?</h3>
+                <p>
+                  Absolutely! Export to Kumu and Gephi for advanced analysis, or download your processed nodes and edges as CSV files.
+                </p>
+              </div>
             </div>
           </div>
         </section>
-      </div>
-    </div>
+      </div >
+
+      <Footer />
+    </div >
   );
 }
 

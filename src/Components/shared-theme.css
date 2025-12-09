@@ -1,0 +1,263 @@
+/* =====================================================
+   SHARED DESIGN SYSTEM
+   Modern, minimalist theme matching HomePage aesthetic
+===================================================== */
+
+/* Design System Variables */
+:root {
+    /* Colors */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f9fafb;
+    --color-bg-light: #f3f4f6;
+    --color-text-primary: #111827;
+    --color-text-secondary: #6b7280;
+    --color-text-muted: #9ca3af;
+    --color-accent: #2563eb;
+    --color-accent-hover: #1d4ed8;
+    --color-accent-light: #eff6ff;
+    --color-border: #e5e7eb;
+    --color-border-light: #f3f4f6;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 999px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.4s ease;
+}
+
+/* =====================================================
+   SHARED BUTTON STYLES
+===================================================== */
+
+.btn-theme-primary {
+    background: #000000;
+    padding: 16px 40px;
+    border-radius: var(--radius-pill);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-theme-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: #1f2937;
+    color: #ffffff;
+}
+
+.btn-theme-secondary {
+    background: var(--color-bg-light);
+    padding: 16px 40px;
+    border-radius: var(--radius-pill);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid var(--color-border);
+    transition: background var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-theme-secondary:hover {
+    background: var(--color-border);
+    color: var(--color-text-primary);
+}
+
+.btn-theme-accent {
+    background: var(--color-accent);
+    padding: 16px 40px;
+    border-radius: var(--radius-pill);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-theme-accent:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    color: #ffffff;
+}
+
+/* Small button variant */
+.btn-theme-sm {
+    padding: 10px 24px;
+    font-size: 14px;
+}
+
+/* =====================================================
+   SHARED CARD STYLES
+===================================================== */
+
+.card-theme {
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-medium);
+}
+
+.card-theme:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.card-theme-no-hover {
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+/* =====================================================
+   SHARED INPUT STYLES
+===================================================== */
+
+.input-theme {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    color: var(--color-text-primary);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input-theme:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-theme::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* =====================================================
+   SHARED PAGE LAYOUTS
+===================================================== */
+
+.page-wrapper-theme {
+    min-height: 100vh;
+    background: var(--color-bg-primary);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--color-text-primary);
+}
+
+.page-container-theme {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+/* =====================================================
+   SHARED TYPOGRAPHY
+===================================================== */
+
+.heading-theme-xl {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -1.5px;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+}
+
+.heading-theme-lg {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -1px;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.heading-theme-md {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+}
+
+.text-theme-body {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.text-theme-muted {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+/* =====================================================
+   SHARED UTILITY CLASSES
+===================================================== */
+
+.bg-theme-primary {
+    background: var(--color-bg-primary);
+}
+
+.bg-theme-secondary {
+    background: var(--color-bg-secondary);
+}
+
+.text-theme-primary {
+    color: var(--color-text-primary);
+}
+
+.text-theme-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-theme-accent {
+    color: var(--color-accent);
+}
+
+.shadow-theme-sm {
+    box-shadow: var(--shadow-sm);
+}
+
+.shadow-theme-md {
+    box-shadow: var(--shadow-md);
+}
+
+.shadow-theme-lg {
+    box-shadow: var(--shadow-lg);
+}

@@ -25,20 +25,7 @@ section {
   display: block;
 }
 
-/* OPTIONAL BUTTON / FOOTER DEFAULTS */
-button {
-  background-color: #2e86de;
-  border: none;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-button:hover {
-  background-color: #2169c2;
-}
+/* OPTIONAL BUTTON DEFAULTS - Removed to allow component-specific styling */
 
 footer {
   background: #282c34;

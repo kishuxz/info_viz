@@ -1,0 +1,95 @@
+/* DynamicForm.css - Minimal custom styling for DynamicForm component */
+
+/* Most styling comes from Bootstrap - this file contains custom overrides */
+
+.dynamic-form-container {
+    min-height: calc(100vh - 80px);
+    padding: 2rem 1rem;
+    background: #ffffff;
+}
+
+.dynamic-form-card {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+/* Connection row styling */
+.connection-row {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.connection-row:hover {
+    background: #f3f4f6;
+    border-color: rgba(59, 130, 246, 0.35);
+}
+
+/* Remove connection button */
+.btn-remove-connection {
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+/* Add connection button */
+.btn-add-connection {
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+/* Form inputs */
+.dynamic-form-container .form-control,
+.dynamic-form-container .form-select {
+    border-radius: 8px;
+    border-color: #e5e7eb;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dynamic-form-container .form-control:focus,
+.dynamic-form-container .form-select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Submit button */
+.btn-submit-form {
+    border-radius: 999px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    background: #000000;
+    border: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: #1f2937;
+}
+
+/* Section headers */
+.form-section-header {
+    font-weight: 600;
+    color: #0f172a;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Required field indicator */
+.required-indicator {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* Status messages */
+.form-status-message {
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}

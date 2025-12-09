@@ -1,12 +1,48 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import authService from "../services/authService";
 import "./Navbar.css";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLearnDropdownOpen, setIsLearnDropdownOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [adminName, setAdminName] = useState('');
+
+  // Check authentication status using authService
+  useEffect(() => {
+    const updateAuthState = () => {
+      const authenticated = authService.isAuthenticated();
+      const user = authService.getUser();
+
+      setIsLoggedIn(authenticated);
+      setAdminName(user?.name || '');
+    };
+
+    // Initial check
+    updateAuthState();
+
+    // Listen for auth state changes
+    const unsubscribe = authService.onAuthStateChange((isAuth, user) => {
+      setIsLoggedIn(isAuth);
+      setAdminName(user?.name || '');
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleLogout = async () => {
+    await authService.logout();
+    setIsLoggedIn(false);
+    setAdminName('');
+    navigate('/');
   };
 
   return (
@@ -30,18 +66,81 @@ export default function Navbar() {
           <span className="logo-text">NetworkMap</span>
         </Link>
 
-        {/* Desktop Navigation Links */}
+        {/* Navigation Links */}
         <div className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/analytics" className="nav-link">Dashboard</Link>
-          <a href="#three-steps" className="nav-link">Features</a>
+
+          {/* Learn Dropdown */}
+          <div
+            className="nav-dropdown"
+            onMouseEnter={() => setIsLearnDropdownOpen(true)}
+            onMouseLeave={() => setIsLearnDropdownOpen(false)}
+          >
+            <button className="dropdown-toggle">
+              Learn
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '2px', opacity: 0.7 }}>
+                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+              </svg>
+            </button>
+            <div className={`dropdown-menu ${isLearnDropdownOpen ? 'show' : ''}`}>
+              <Link to="/learn/getting-started" className="dropdown-item">
+                Getting Started
+              </Link>
+              <Link to="/learn/form-creation" className="dropdown-item">
+                Form Creation
+              </Link>
+              <Link to="/learn/nodes-edges" className="dropdown-item">
+                Nodes & Edges
+              </Link>
+              <Link to="/learn/export" className="dropdown-item">
+                Export Guide
+              </Link>
+              <Link to="/learn/examples" className="dropdown-item">
+                Use Cases
+              </Link>
+              <Link to="/learn/faq" className="dropdown-item">
+                FAQ
+              </Link>
+            </div>
+          </div>
+
+          {/* Show Analytics link only when logged in */}
+          {isLoggedIn && (
+            <Link to="/analytics" className="nav-link">Analytics</Link>
+          )}
+
+          {/* Always show Features and GitHub */}
+          <a href="/#three-steps" className="nav-link">Features</a>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="nav-link">GitHub</a>
         </div>
 
-        {/* Auth Buttons */}
+        {/* Auth Section */}
         <div className={`navbar-auth ${isMobileMenuOpen ? 'active' : ''}`}>
-          <button className="auth-btn login-btn">Log In</button>
-          <button className="auth-btn signup-btn">Sign Up</button>
+          {isLoggedIn ? (
+            <>
+              <Link to="/admin" className="admin-profile-link">
+                <div className="admin-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <span className="admin-name">Admin</span>
+              </Link>
+              <button className="auth-btn login-btn" onClick={handleLogout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login">
+                <button className="auth-btn login-btn">Log In</button>
+              </Link>
+              <Link to="/signup">
+                <button className="auth-btn signup-btn">Sign Up</button>
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Mobile Menu Toggle */}

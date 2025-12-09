@@ -1,0 +1,561 @@
+/* Import shared theme */
+@import '../shared-theme.css';
+
+.getting-started-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Hero Section - Matching HomePage */
+.learn-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--color-bg-light);
+    color: var(--color-text-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color-border);
+}
+
+.learn-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+/* Workflow Steps - Clean */
+.workflow-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.workflow-step {
+    text-align: center;
+    flex: 1;
+    min-width: 140px;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 0.75rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.workflow-step h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.workflow-step p {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.workflow-arrow {
+    font-size: 2rem;
+    color: var(--color-text-muted);
+    font-weight: bold;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+/* Buttons - Site Theme */
+.btn-primary-learn {
+    padding: 16px 40px;
+    background: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 16px;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-md);
+    display: inline-block;
+}
+
+.btn-primary-learn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    background: #1f2937;
+    color: white;
+}
+
+.btn-secondary-learn {
+    padding: 16px 40px;
+    background: var(--color-bg-light);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-fast);
+    display: inline-block;
+}
+
+.btn-secondary-learn:hover {
+    background: var(--color-border);
+    color: var(--color-text-primary);
+    transform: translateY(-2px);
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 4rem;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
+    letter-spacing: -0.5px;
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* Info Boxes - Cleaner */
+.info-box {
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+}
+
+.info-box.primary {
+    background: var(--color-accent-light);
+    border-color: #dbeafe;
+}
+
+.info-box h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.info-box p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+/* Two Column Grid */
+.two-column-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.feature-card {
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-primary);
+    transition: all var(--transition-medium);
+}
+
+.feature-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.feature-card h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    font-weight: 700;
+}
+
+.feature-card ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+.feature-card li {
+    margin-bottom: 0.5rem;
+}
+
+.feature-card code {
+    background: var(--color-bg-light);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: var(--color-accent);
+}
+
+.note-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--color-accent-light);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-accent);
+    color: var(--color-text-secondary);
+}
+
+/* Examples Grid */
+.example-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.example-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-medium);
+}
+
+.example-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.example-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.example-card h4 {
+    margin: 0.5rem 0;
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.example-card p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+}
+
+/* Concepts Table */
+.concepts-table {
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.concept-row {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    align-items: center;
+}
+
+.concept-row:last-child {
+    border-bottom: none;
+}
+
+.concept-row:nth-child(even) {
+    background: var(--color-bg-primary);
+}
+
+.concept-term {
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.concept-definition {
+    color: var(--color-text-secondary);
+}
+
+.concept-example {
+    color: var(--color-text-muted);
+    font-style: italic;
+    font-size: 0.9375rem;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.benefit-card {
+    padding: 2rem;
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: all var(--transition-medium);
+}
+
+.benefit-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+    margin: 0.5rem 0;
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.benefit-card p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+/* Next Steps */
+.cta-section {
+    text-align: center;
+    background: var(--color-bg-secondary);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    margin-top: 4rem;
+    border: 1px solid var(--color-border);
+}
+
+.cta-section h2 {
+    margin-bottom: 1rem;
+}
+
+.cta-section>p {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+}
+
+.next-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.next-step-card {
+    background: var(--color-bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-medium);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.next-step-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.card-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    color: white;
+    padding: 0.375rem 1rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.next-step-card h3 {
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    font-weight: 700;
+}
+
+.next-step-card p {
+    flex: 1;
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.card-arrow {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-accent);
+}
+
+/* Workflow Diagram */
+.workflow-diagram {
+    background: var(--color-bg-secondary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    margin: 2rem 0;
+}
+
+.workflow-phase {
+    background: var(--color-bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color-border);
+}
+
+.phase-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.phase-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    font-weight: 700;
+}
+
+.workflow-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.item-badge {
+    display: inline-block;
+    background: #000000;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.workflow-item h4 {
+    margin: 0.5rem 0;
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.workflow-item p {
+    margin: 0.5rem 0;
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+}
+
+.code-preview {
+    background: #1f2937;
+    color: #10b981;
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.workflow-arrow-big {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--color-text-muted);
+    margin: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .learn-hero h1 {
+        font-size: 2rem;
+    }
+
+    .workflow-steps {
+        flex-direction: column;
+    }
+
+    .workflow-arrow {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+
+    .two-column-grid,
+    .example-grid,
+    .benefits-grid,
+    .next-steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concept-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .workflow-diagram {
+        padding: 1rem;
+    }
+
+    .workflow-phase {
+        padding: 1rem;
+    }
+}

@@ -27,7 +27,7 @@ export default function initNetworkCanvas(canvas) {
   /* -----------------------------------------------------
      CONFIG — tuned for visibility + elegance
   ----------------------------------------------------- */
-  const NODE_COUNT = 75;       // slightly more dense
+  const NODE_COUNT = 110;       // increased for larger canvas area
   const MAX_SPEED = 0.22;       // smoother movement
   const LINK_DISTANCE = 220;    // more line connections
 

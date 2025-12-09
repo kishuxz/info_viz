@@ -1,39 +1,39 @@
 /* =====================================================
-   NAVBAR - Professional & Aesthetic
+   NAVBAR - Modern & Aesthetic
 ===================================================== */
 .navbar {
-    position: fixed;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e5e7eb;
     z-index: 1000;
-    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .navbar-container {
-    max-width: 1400px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 16px 32px;
+    padding: 0 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
+    height: 64px;
 }
 
-/* Logo/Brand */
+/* Logo */
 .navbar-logo {
     display: flex;
     align-items: center;
     gap: 12px;
     text-decoration: none;
-    color: #111827;
+    color: #0F172A;
     font-weight: 700;
-    font-size: 20px;
-    transition: opacity 0.2s ease;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 32px;
 }
 
 .navbar-logo:hover {
@@ -41,179 +41,255 @@
 }
 
 .logo-icon {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
+    color: #4F46E5;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #2563eb;
 }
 
-.logo-text {
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-/* Navigation Links */
+/* Navigation Links Container */
 .navbar-links {
     display: flex;
     align-items: center;
-    gap: 32px;
-    flex: 1;
-    justify-content: center;
+    gap: 24px;
 }
 
+/* Nav Links */
 .nav-link {
+    color: #475569;
     text-decoration: none;
-    color: #4b5563;
     font-weight: 500;
-    font-size: 15px;
-    transition: color 0.2s ease;
+    font-size: 14px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-}
-
-.nav-link:hover {
-    color: #2563eb;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
+    bottom: 2px;
+    left: 16px;
+    right: 16px;
     height: 2px;
-    background: #2563eb;
-    transition: width 0.3s ease;
+    background: #3B82F6;
+    transform: scaleX(0);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover {
+    color: #0F172A;
 }
 
 .nav-link:hover::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
-/* Auth Buttons */
+/* Dropdown Container */
+.nav-dropdown {
+    position: relative;
+}
+
+/* Learn Button - Matches Nav Links EXACTLY */
+.dropdown-toggle {
+    background: transparent;
+    color: #475569;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dropdown-toggle::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: #3B82F6;
+    transform: scaleX(0);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+}
+
+.dropdown-toggle:hover {
+    color: #0F172A;
+}
+
+.dropdown-toggle:hover::after {
+    transform: scaleX(1);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 6px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    padding: 6px;
+    min-width: 210px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    display: block;
+    padding: 11px 16px;
+    color: #475569;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-item:hover {
+    background: rgba(59, 130, 246, 0.08);
+    color: #1E40AF;
+}
+
+/* Auth Buttons Container */
 .navbar-auth {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
-.auth-btn {
-    padding: 10px 24px;
+/* Admin Profile Link */
+.admin-profile-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #475569;
+    padding: 6px 12px;
     border-radius: 8px;
-    font-weight: 600;
+    transition: all 0.2s;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.admin-profile-link:hover {
+    background: rgba(100, 116, 139, 0.08);
+    color: #0F172A;
+}
+
+.admin-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.admin-name {
+    line-height: 1;
+}
+
+.admin-icon {
+    width: 17px;
+    height: 17px;
+}
+
+/* Logout Button */
+.logout-btn {
+    padding: 9px 18px;
+    background: white;
+    color: #475569;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 8px;
+    font-weight: 500;
     font-size: 14px;
     cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logout-btn:hover {
+    background: #F8FAFC;
+    border-color: #CBD5E1;
+    color: #0F172A;
+}
+
+/* Login/Signup Buttons */
+.login-btn,
+.signup-btn {
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .login-btn {
-    background: transparent;
-    color: #111827;
-    border: 1px solid #e5e7eb;
+    background: white;
+    color: #475569;
+    border: 1.5px solid #E2E8F0;
 }
 
 .login-btn:hover {
-    background: #f3f4f6;
+    background: #F8FAFC;
+    border-color: #CBD5E1;
+    color: #0F172A;
 }
 
 .signup-btn {
-    background: #2563eb;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background: white !important;
+    color: #475569 !important;
+    border: 1.5px solid #E2E8F0 !important;
+    min-width: 80px !important;
 }
 
 .signup-btn:hover {
-    background: #1d4ed8;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    transform: translateY(-1px);
+    background: #F8FAFC !important;
+    border-color: #CBD5E1 !important;
+    color: #0F172A !important;
 }
 
-/* Mobile Menu Toggle */
+/* Mobile Menu Toggle - Hidden on Desktop */
 .mobile-menu-toggle {
     display: none;
-    flex-direction: column;
-    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 8px;
 }
 
-.hamburger {
-    width: 24px;
-    height: 2px;
-    background: #111827;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-}
-
-.hamburger.active:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger.active:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-/* =====================================================
-   RESPONSIVE - Mobile
-===================================================== */
+/* Mobile Responsive */
 @media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
     .navbar-container {
-        padding: 12px 20px;
+        padding: 0 20px;
+        height: 56px;
     }
 
     .mobile-menu-toggle {
-        display: flex;
+        display: block;
     }
-
-    .navbar-links,
-    .navbar-auth {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        padding: 20px;
-        border-bottom: 1px solid #e5e7eb;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar-links.active,
-    .navbar-auth.active {
-        display: flex;
-    }
-
-    .navbar-links {
-        gap: 20px;
-        align-items: flex-start;
-    }
-
-    .navbar-auth {
-        gap: 12px;
-        padding-top: 16px;
-        border-top: 1px solid #e5e7eb;
-    }
-
-    .auth-btn {
-        width: 100%;
-    }
-
-    .nav-link {
-        font-size: 16px;
-    }
-}
-
-/* Add padding to body to account for fixed navbar */
-body {
-    padding-top: 70px;
 }
