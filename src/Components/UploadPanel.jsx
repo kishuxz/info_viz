@@ -15,7 +15,7 @@ export default function UploadPanel() {
 
   // New state for enhanced features
   // const [forms, setForms] = useState([]); // Commented out - will be used when form fetching is re-enabled
-  const [selectedForms, setSelectedForms] = useState([]);
+  // const [selectedForms, setSelectedForms] = useState([]); // Commented out - used by disabled forms sidebar
   // const [loadingForms, setLoadingForms] = useState(true); // Commented out - used by disabled forms sidebar
   const [nodesPreview, setNodesPreview] = useState(null);
   const [edgesPreview, setEdgesPreview] = useState(null);
@@ -58,7 +58,7 @@ export default function UploadPanel() {
     };
     fetchForms();
     */
-    setLoadingForms(false); // Skip form loading for now
+    // setLoadingForms(false); // Skip form loading for now - DISABLED
   }, []);
 
   // Handle file upload from input
@@ -197,8 +197,8 @@ export default function UploadPanel() {
 
   // Handle upload and conversion
   const handleUpload = async () => {
-    if (!files.length && selectedForms.length === 0) {
-      setMessage("Select files or forms from the sidebar to convert.");
+    if (!files.length) {
+      setMessage("Select files to convert.");
       return;
     }
 
