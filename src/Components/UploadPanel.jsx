@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Papa from "papaparse";
-import { getFormsForAdmin } from "../api";
+// import { getFormsForAdmin } from "../api"; // Commented out - not used currently
 import "./UploadPanel.css";
 
 export default function UploadPanel() {
@@ -14,7 +14,7 @@ export default function UploadPanel() {
   const [busy, setBusy] = useState(false);
 
   // New state for enhanced features
-  const [forms, setForms] = useState([]);
+  // const [forms, setForms] = useState([]); // Commented out - will be used when form fetching is re-enabled
   const [selectedForms, setSelectedForms] = useState([]);
   const [loadingForms, setLoadingForms] = useState(true);
   const [nodesPreview, setNodesPreview] = useState(null);
@@ -33,7 +33,7 @@ export default function UploadPanel() {
   // Flask backend for network conversion (separate from Node.js backend)
   // Port 5002 to avoid conflict with macOS AirPlay on port 5000
   const NETWORK_API = process.env.REACT_APP_NETWORK_API_URL || "http://localhost:5002";
-  const API = process.env.REACT_APP_API_URL || "http://localhost:5001";
+  // const API = process.env.REACT_APP_API_URL || "http://localhost:5001"; // Not used currently
   const ALLOWED = [".csv", ".xlsx", ".xls"];
 
   const hasAllowedExt = (name = "") =>
