@@ -20,7 +20,9 @@ const corsOptions = {
         'http://localhost:3002',
         'http://127.0.0.1:3000',
         'http://127.0.0.1:3001',
-        'http://127.0.0.1:3002'
+        'http://127.0.0.1:3002',
+        'https://networktemplate.netlify.app',  // Production frontend
+        'https://cheery-vacherin-ecd2be.netlify.app'  // Old Netlify URL (backup)
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
