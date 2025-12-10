@@ -105,7 +105,7 @@ export default function Navbar() {
 
           {/* Always show Features and GitHub */}
           <a href="/#three-steps" className="nav-link">Features</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="nav-link">GitHub</a>
+          <a href="https://github.com/kishuxz/info_viz" target="_blank" rel="noopener noreferrer" className="nav-link">GitHub</a>
         </div>
 
         {/* Auth Section */}

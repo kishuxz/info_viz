@@ -153,7 +153,9 @@ function HomePage() {
               <a href="#three-steps" style={{ textDecoration: 'none' }}>
                 <button className="btn-primary">Start Mapping</button>
               </a>
-              <button className="btn-secondary">View on GitHub</button>
+              <a href="https://github.com/kishuxz/info_viz" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <button className="btn-secondary">View on GitHub</button>
+              </a>
             </div>
           </div>
 
