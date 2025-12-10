@@ -240,47 +240,6 @@ def build_graph_from_responses(df: pd.DataFrame, mapping=None):
         ],
     )
 
-    # ---------- SECTOR NODES (NEW 3-LAYER STRUCTURE) ----------
-    # Create sector nodes with CLEAN labels (not slugified)
-    sector_key = sector.apply(lambda s: canonical_key(s) if norm_str(s) else "")
-    
-    sector_rows = []
-    for key, group in df.groupby(sector_key):
-        if not key:  # Skip empty sectors
-            continue
-        
-        # Get the most common sector name (clean, readable)
-        # sector is a Series, so we get values from the original column
-        sector_col_name = cols_lower.get("sector")
-        if sector_col_name:
-            sector_values = group[sector_col_name].apply(norm_str)
-            clean_sector_name = most_common_non_empty(sector_values)
-        else:
-            clean_sector_name = key
-            
-        if not clean_sector_name:
-            continue
-            
-        node_id = f"sector_{slug(key)}"  # ID is slugified
-        label = clean_sector_name  # Label is CLEAN (e.g., "Robotics", "NLP")
-        
-        sector_rows.append((
-            node_id, label, "sector",
-            "", "",  # org_type, org_sector blank
-            "", "", "",  # city, state, country blank
-            "", ""  # event_date, event_id blank
-        ))
-    
-    sector_df = pd.DataFrame(
-        sector_rows,
-        columns=[
-            "Id", "Label", "type",
-            "org_type", "org_sector",
-            "city", "state", "country",
-            "event_date", "event_id",
-        ],
-    )
-
     # ---------- ORG NODES ----------
     org_rows = []
     
@@ -366,74 +325,6 @@ def build_graph_from_responses(df: pd.DataFrame, mapping=None):
                 "weight",
             ]
         )
-
-    # ---------- EVENT→SECTOR EDGES (NEW 3-LAYER STRUCTURE) ----------
-    event_sector_edges = []
-    for (ek, sk), group in df.groupby([event_key, sector_key]):
-        if not ek or not sk:
-            continue
-        ev_id = f"evt_{slug(ek)}"
-        sec_id = f"sector_{slug(sk)}"
-        
-        # Get event_id and event_date from the group using column names
-        eid_col = cols_lower.get("eventid")
-        date_col = cols_lower.get("eventdate")
-        
-        any_eid = first_non_empty(group[eid_col]) if eid_col else ""
-        any_date = first_non_empty(group[date_col]) if date_col else ""
-        
-        # Weight = number of unique orgs in this sector at this event
-        # org_key is a Series, so we get the subset for this group by index
-        group_org_keys = org_key.loc[group.index]
-        weight = len(group_org_keys.unique())
-        
-        event_sector_edges.append({
-            "Source": ev_id,
-            "Target": sec_id,
-            "edge_type": "event_sector",
-            "event_id": any_eid,
-            "event_date": any_date,
-            "connection_type": "",
-            "description": "",
-            "weight": weight,
-        })
-    
-    event_sector_df = pd.DataFrame(event_sector_edges) if event_sector_edges else pd.DataFrame(
-        columns=["Source", "Target", "edge_type", "event_id", "event_date", "connection_type", "description", "weight"]
-    )
-
-    # ---------- SECTOR→ORG EDGES (NEW 3-LAYER STRUCTURE) ----------
-    sector_org_edges = []
-    for (sk, ok), group in df.groupby([sector_key, org_key]):
-        if not sk or not ok:
-            continue
-        sec_id = f"sector_{slug(sk)}"
-        org_id = f"org_{slug(ok)}"
-        
-        # Get event_id and event_date from the group using column names
-        eid_col = cols_lower.get("eventid")
-        date_col = cols_lower.get("eventdate")
-        
-        any_eid = first_non_empty(group[eid_col]) if eid_col else ""
-        any_date = first_non_empty(group[date_col]) if date_col else ""
-        
-        # Weight = number of participants from this org in this sector
-        weight = len(group)
-        
-        sector_org_edges.append({
-            "Source": sec_id,
-            "Target": org_id,
-            "edge_type": "sector_org",
-            "event_id": any_eid,
-            "event_date": any_date,
-            "connection_type": "",
-            "description": "",
-            "weight": weight,
-        })
-    
-    sector_org_df = pd.DataFrame(sector_org_edges) if sector_org_edges else pd.DataFrame(
-        columns=["Source", "Target", "edge_type", "event_id", "event_date", "connection_type", "description", "weight"]
-    )
 
     # ---------- CONNECTION EDGES (org -> org) ----------
     conn_edges = []
@@ -582,11 +473,9 @@ def build_graph_from_responses(df: pd.DataFrame, mapping=None):
             ]
         )
 
-    # Include sector nodes in the output
-    nodes_df = pd.concat([event_df, sector_df, org_df], ignore_index=True)
+    nodes_df = pd.concat([event_df, org_df], ignore_index=True)
 
-    # Include all edge types: attendance, event→sector, sector→org, and connections
-    edges_df = pd.concat([attendance_df, event_sector_df, sector_org_df, connection_df], ignore_index=True)
+    edges_df = pd.concat([attendance_df, connection_df], ignore_index=True)
 
     return nodes_df, edges_df
 

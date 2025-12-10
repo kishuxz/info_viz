@@ -1,18 +1,484 @@
 from,to,edge_type,event_id,event_date,weight,connection_type,description
-org_city_schools_district,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_community_care,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_healthfirst_clinic,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_iit_bombay,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_metro_tech_hub,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_neighborhood_center,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_quantiphi,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_tata_consultancy_services,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_urban_youth_alliance,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_youth_sports_league,evt_evt_2025_001,attendance,EVT-2025-001,2025-03-15,1,,
-org_city_schools_district,org_quantiphi,connection,EVT-2025-001,2025-03-15,1,Collaboration,Discussed projects at Tutor/Mentor Spring Conference 2025
-org_community_care,org_quantiphi,connection,EVT-2025-001,2025-03-15,1,Collaboration,Discussed projects at Tutor/Mentor Spring Conference 2025
-org_iit_bombay,org_community_care,connection,EVT-2025-001,2025-03-15,1,Networking,Met during Tutor/Mentor Spring Conference 2025
-org_metro_tech_hub,org_quantiphi,connection,EVT-2025-001,2025-03-15,1,Collaboration,Discussed projects at Tutor/Mentor Spring Conference 2025
-org_quantiphi,org_community_care,connection,EVT-2025-001,2025-03-15,1,Networking,Met during Tutor/Mentor Spring Conference 2025
-org_tata_consultancy_services,org_community_care,connection,EVT-2025-001,2025-03-15,1,Networking,Met during Tutor/Mentor Spring Conference 2025
-org_youth_sports_league,org_quantiphi,connection,EVT-2025-001,2025-03-15,1,Collaboration,Discussed projects at Tutor/Mentor Spring Conference 2025
+org_allen_and_sons_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_anderson_zimmerman_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,6,,
+org_barber_weber_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,6,,
+org_barry_llc_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,5,,
+org_campbell_plc_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_carpenter_llc_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,4,,
+org_clark_pham_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_collins_llc_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,6,,
+org_crawford_smith_and_carroll_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_escobar_green_and_monroe_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,1,,
+org_fisher_robinson_and_evans_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,4,,
+org_gray_brock_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_hall_brock_and_wilson_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_harvey_sanders_and_decker_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,5,,
+org_hernandez_simon_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_hicks_johnson_and_walsh_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,1,,
+org_hill_tapia_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,5,,
+org_johnson_and_sons_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_johnson_atkinson_and_adams_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_jones_harris_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_lee_llc_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_meza_potter_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_miller_smith_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,5,,
+org_mitchell_smith_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,1,,
+org_myers_barr_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_oneill_gregory_and_good_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,4,,
+org_pope_ltd_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_ramirez_kelly_and_collins_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,5,,
+org_ramirez_plc_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_ramos_roth_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_richard_group_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,1,,
+org_rodgers_johnson_and_jenkins_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,1,,
+org_rodriguez_cooper_and_bryant_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,4,,
+org_rodriguez_hickman_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_ruiz_smith_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,4,,
+org_sanchez_group_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,5,,
+org_scott_green_and_lopez_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_smith_brown_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_solomon_inc_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,3,,
+org_taylor_and_sons_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,5,,
+org_terry_group_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,6,,
+org_thompson_adams_and_spears_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_thompson_robinson_and_warner_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,1,,
+org_wade_lee_and_strickland_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,6,,
+org_williams_garcia_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_wright_phillips_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_yates_carter_and_foley_university,evt_evt_2025_aiconf,attendance,EVT-2025-AICONF,2025-09-10,2,,
+org_allen_and_sons_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_allen_and_sons_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_allen_and_sons_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Robotics work during breakout session
+org_allen_and_sons_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_allen_and_sons_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_anderson_zimmerman_university,org_allen_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_anderson_zimmerman_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Robotics work during breakout session
+org_anderson_zimmerman_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_anderson_zimmerman_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_anderson_zimmerman_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_anderson_zimmerman_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_anderson_zimmerman_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_anderson_zimmerman_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_anderson_zimmerman_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,2,Met at conference,Met during poster session bridging NLP and Robotics
+org_anderson_zimmerman_university,org_rodriguez_cooper_and_bryant_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_anderson_zimmerman_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_anderson_zimmerman_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_anderson_zimmerman_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_anderson_zimmerman_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_anderson_zimmerman_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_barber_weber_university,org_allen_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_barber_weber_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Robotics work during breakout session
+org_barber_weber_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_barber_weber_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Computer Vision work during breakout session
+org_barber_weber_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_barber_weber_university,org_gray_brock_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_barber_weber_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,2,Met at conference,Met during poster session bridging Robotics and NLP
+org_barber_weber_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_barber_weber_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_barber_weber_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_barber_weber_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_barber_weber_university,org_meza_potter_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_barber_weber_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_barber_weber_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Computer Vision work during breakout session
+org_barber_weber_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_barber_weber_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_barber_weber_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_barber_weber_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_barber_weber_university,org_wright_phillips_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_barry_llc_university,org_allen_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_barry_llc_university,org_campbell_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_barry_llc_university,org_carpenter_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_barry_llc_university,org_crawford_smith_and_carroll_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_barry_llc_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_barry_llc_university,org_jones_harris_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_barry_llc_university,org_lee_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_barry_llc_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_barry_llc_university,org_ramirez_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_barry_llc_university,org_richard_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_barry_llc_university,org_rodgers_johnson_and_jenkins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_barry_llc_university,org_rodriguez_cooper_and_bryant_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_barry_llc_university,org_yates_carter_and_foley_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_campbell_plc_university,org_crawford_smith_and_carroll_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_campbell_plc_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_campbell_plc_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_campbell_plc_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_carpenter_llc_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_carpenter_llc_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_carpenter_llc_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_carpenter_llc_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_carpenter_llc_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_carpenter_llc_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Computer Vision work during breakout session
+org_carpenter_llc_university,org_ramos_roth_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_carpenter_llc_university,org_rodgers_johnson_and_jenkins_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_carpenter_llc_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_carpenter_llc_university,org_wright_phillips_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_carpenter_llc_university,org_yates_carter_and_foley_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_clark_pham_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,2,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_clark_pham_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_clark_pham_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_clark_pham_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_clark_pham_university,org_pope_ltd_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_clark_pham_university,org_rodriguez_cooper_and_bryant_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_clark_pham_university,org_rodriguez_hickman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_clark_pham_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_clark_pham_university,org_smith_brown_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_clark_pham_university,org_thompson_robinson_and_warner_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_collins_llc_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_collins_llc_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_collins_llc_university,org_crawford_smith_and_carroll_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_collins_llc_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_collins_llc_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_collins_llc_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_collins_llc_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_collins_llc_university,org_rodriguez_cooper_and_bryant_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_collins_llc_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_collins_llc_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_collins_llc_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_collins_llc_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_collins_llc_university,org_thompson_adams_and_spears_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_collins_llc_university,org_thompson_robinson_and_warner_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_collins_llc_university,org_williams_garcia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_crawford_smith_and_carroll_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_crawford_smith_and_carroll_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_crawford_smith_and_carroll_university,org_jones_harris_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_crawford_smith_and_carroll_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_crawford_smith_and_carroll_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_crawford_smith_and_carroll_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_escobar_green_and_monroe_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_escobar_green_and_monroe_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_escobar_green_and_monroe_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_escobar_green_and_monroe_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_fisher_robinson_and_evans_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_fisher_robinson_and_evans_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_fisher_robinson_and_evans_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_fisher_robinson_and_evans_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_fisher_robinson_and_evans_university,org_lee_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_fisher_robinson_and_evans_university,org_myers_barr_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_fisher_robinson_and_evans_university,org_myers_barr_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_fisher_robinson_and_evans_university,org_solomon_inc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_fisher_robinson_and_evans_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_fisher_robinson_and_evans_university,org_wright_phillips_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_gray_brock_university,org_crawford_smith_and_carroll_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_gray_brock_university,org_escobar_green_and_monroe_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_gray_brock_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_gray_brock_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_gray_brock_university,org_pope_ltd_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_gray_brock_university,org_pope_ltd_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_gray_brock_university,org_smith_brown_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_gray_brock_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_hall_brock_and_wilson_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_hall_brock_and_wilson_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_hall_brock_and_wilson_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_hall_brock_and_wilson_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_hall_brock_and_wilson_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_hall_brock_and_wilson_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_hall_brock_and_wilson_university,org_meza_potter_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_hall_brock_and_wilson_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_hall_brock_and_wilson_university,org_myers_barr_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_hall_brock_and_wilson_university,org_rodgers_johnson_and_jenkins_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_hall_brock_and_wilson_university,org_smith_brown_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_harvey_sanders_and_decker_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_harvey_sanders_and_decker_university,org_carpenter_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_harvey_sanders_and_decker_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Robotics work during breakout session
+org_harvey_sanders_and_decker_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_harvey_sanders_and_decker_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_harvey_sanders_and_decker_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_harvey_sanders_and_decker_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_harvey_sanders_and_decker_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_harvey_sanders_and_decker_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_harvey_sanders_and_decker_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_harvey_sanders_and_decker_university,org_ramos_roth_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_harvey_sanders_and_decker_university,org_rodriguez_cooper_and_bryant_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed NLP work during breakout session
+org_harvey_sanders_and_decker_university,org_yates_carter_and_foley_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_hernandez_simon_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_hernandez_simon_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_hernandez_simon_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_hernandez_simon_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_hernandez_simon_university,org_carpenter_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_hernandez_simon_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_hernandez_simon_university,org_ramirez_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_hernandez_simon_university,org_rodriguez_hickman_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_hernandez_simon_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_hicks_johnson_and_walsh_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_hicks_johnson_and_walsh_university,org_rodriguez_hickman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_hill_tapia_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_hill_tapia_university,org_campbell_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_hill_tapia_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_hill_tapia_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_hill_tapia_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_hill_tapia_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_hill_tapia_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_hill_tapia_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_hill_tapia_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_hill_tapia_university,org_ramirez_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_hill_tapia_university,org_rodgers_johnson_and_jenkins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_hill_tapia_university,org_smith_brown_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_hill_tapia_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_hill_tapia_university,org_wright_phillips_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_johnson_and_sons_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_johnson_and_sons_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_johnson_and_sons_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_johnson_and_sons_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_johnson_and_sons_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_johnson_atkinson_and_adams_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Computer Vision work during breakout session
+org_johnson_atkinson_and_adams_university,org_campbell_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_johnson_atkinson_and_adams_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_johnson_atkinson_and_adams_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_johnson_atkinson_and_adams_university,org_gray_brock_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_johnson_atkinson_and_adams_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_johnson_atkinson_and_adams_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_johnson_atkinson_and_adams_university,org_ruiz_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_johnson_atkinson_and_adams_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_jones_harris_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_jones_harris_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_jones_harris_university,org_ramos_roth_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_jones_harris_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_jones_harris_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_jones_harris_university,org_wright_phillips_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_lee_llc_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_lee_llc_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_lee_llc_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_lee_llc_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_lee_llc_university,org_jones_harris_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_lee_llc_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_lee_llc_university,org_ruiz_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_meza_potter_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_meza_potter_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_meza_potter_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_meza_potter_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_meza_potter_university,org_pope_ltd_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_meza_potter_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_meza_potter_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_meza_potter_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_miller_smith_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_miller_smith_university,org_campbell_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_miller_smith_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_miller_smith_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_miller_smith_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_miller_smith_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_miller_smith_university,org_lee_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_miller_smith_university,org_myers_barr_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_miller_smith_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_miller_smith_university,org_ramirez_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_miller_smith_university,org_rodriguez_hickman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_miller_smith_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_miller_smith_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_miller_smith_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_miller_smith_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_miller_smith_university,org_solomon_inc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_miller_smith_university,org_thompson_adams_and_spears_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_mitchell_smith_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_mitchell_smith_university,org_meza_potter_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_mitchell_smith_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_myers_barr_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_myers_barr_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_myers_barr_university,org_hall_brock_and_wilson_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_myers_barr_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_myers_barr_university,org_lee_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_myers_barr_university,org_meza_potter_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_myers_barr_university,org_ramos_roth_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_myers_barr_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_myers_barr_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_oneill_gregory_and_good_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_oneill_gregory_and_good_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_oneill_gregory_and_good_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_oneill_gregory_and_good_university,org_campbell_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_oneill_gregory_and_good_university,org_carpenter_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_oneill_gregory_and_good_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_oneill_gregory_and_good_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_oneill_gregory_and_good_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_oneill_gregory_and_good_university,org_lee_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_oneill_gregory_and_good_university,org_meza_potter_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_oneill_gregory_and_good_university,org_pope_ltd_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_oneill_gregory_and_good_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_oneill_gregory_and_good_university,org_williams_garcia_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_oneill_gregory_and_good_university,org_wright_phillips_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_pope_ltd_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_pope_ltd_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_pope_ltd_university,org_campbell_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_pope_ltd_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_pope_ltd_university,org_hicks_johnson_and_walsh_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_pope_ltd_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_pope_ltd_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_pope_ltd_university,org_richard_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_pope_ltd_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_pope_ltd_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_pope_ltd_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_ramirez_kelly_and_collins_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramirez_kelly_and_collins_university,org_carpenter_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_ramirez_kelly_and_collins_university,org_crawford_smith_and_carroll_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_ramirez_kelly_and_collins_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramirez_kelly_and_collins_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_ramirez_kelly_and_collins_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_ramirez_kelly_and_collins_university,org_pope_ltd_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Robotics work during breakout session
+org_ramirez_kelly_and_collins_university,org_ramos_roth_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_ramirez_kelly_and_collins_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_ramirez_kelly_and_collins_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramirez_kelly_and_collins_university,org_smith_brown_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_ramirez_kelly_and_collins_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_ramirez_kelly_and_collins_university,org_thompson_robinson_and_warner_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_ramirez_kelly_and_collins_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_ramirez_kelly_and_collins_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_ramirez_kelly_and_collins_university,org_williams_garcia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramirez_plc_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_ramirez_plc_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_ramirez_plc_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_ramirez_plc_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramirez_plc_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramirez_plc_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramirez_plc_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_ramirez_plc_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_ramos_roth_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramos_roth_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Robotics work during breakout session
+org_ramos_roth_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_ramos_roth_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_ramos_roth_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramos_roth_university,org_rodriguez_cooper_and_bryant_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ramos_roth_university,org_rodriguez_hickman_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_ramos_roth_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_ramos_roth_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_ramos_roth_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_richard_group_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_richard_group_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_rodgers_johnson_and_jenkins_university,org_allen_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_rodgers_johnson_and_jenkins_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_rodgers_johnson_and_jenkins_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_allen_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_rodriguez_cooper_and_bryant_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_harvey_sanders_and_decker_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_rodriguez_cooper_and_bryant_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_rodriguez_cooper_and_bryant_university,org_ramirez_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_solomon_inc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_rodriguez_cooper_and_bryant_university,org_yates_carter_and_foley_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_rodriguez_hickman_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_rodriguez_hickman_university,org_gray_brock_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_rodriguez_hickman_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_rodriguez_hickman_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_rodriguez_hickman_university,org_solomon_inc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_rodriguez_hickman_university,org_solomon_inc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_rodriguez_hickman_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_rodriguez_hickman_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed NLP work during breakout session
+org_ruiz_smith_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_ruiz_smith_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_ruiz_smith_university,org_ramos_roth_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_ruiz_smith_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_ruiz_smith_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_ruiz_smith_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_ruiz_smith_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_ruiz_smith_university,org_wright_phillips_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_ruiz_smith_university,org_yates_carter_and_foley_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_sanchez_group_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_sanchez_group_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_sanchez_group_university,org_carpenter_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_sanchez_group_university,org_carpenter_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_sanchez_group_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_sanchez_group_university,org_collins_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_sanchez_group_university,org_crawford_smith_and_carroll_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_sanchez_group_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,2,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_sanchez_group_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_sanchez_group_university,org_ramirez_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_sanchez_group_university,org_rodgers_johnson_and_jenkins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_sanchez_group_university,org_ruiz_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_sanchez_group_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed Robotics work during breakout session
+org_sanchez_group_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_sanchez_group_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_sanchez_group_university,org_williams_garcia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_scott_green_and_lopez_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_scott_green_and_lopez_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_scott_green_and_lopez_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_scott_green_and_lopez_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_scott_green_and_lopez_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_scott_green_and_lopez_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_scott_green_and_lopez_university,org_pope_ltd_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_scott_green_and_lopez_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_scott_green_and_lopez_university,org_ramos_roth_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_scott_green_and_lopez_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_scott_green_and_lopez_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_scott_green_and_lopez_university,org_thompson_adams_and_spears_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_smith_brown_university,org_campbell_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_smith_brown_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_smith_brown_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_smith_brown_university,org_richard_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_smith_brown_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_smith_brown_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_solomon_inc_university,org_lee_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_solomon_inc_university,org_meza_potter_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_solomon_inc_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_solomon_inc_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_taylor_and_sons_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_taylor_and_sons_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_taylor_and_sons_university,org_escobar_green_and_monroe_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_taylor_and_sons_university,org_hernandez_simon_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_taylor_and_sons_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_taylor_and_sons_university,org_hill_tapia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_taylor_and_sons_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_taylor_and_sons_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,2,Shared research interests,Discussed NLP work during breakout session
+org_taylor_and_sons_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_taylor_and_sons_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_taylor_and_sons_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_taylor_and_sons_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_terry_group_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_terry_group_university,org_campbell_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_terry_group_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_terry_group_university,org_gray_brock_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_terry_group_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_terry_group_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_terry_group_university,org_jones_harris_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_terry_group_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_terry_group_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_terry_group_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_terry_group_university,org_ramirez_plc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_terry_group_university,org_rodgers_johnson_and_jenkins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_terry_group_university,org_rodriguez_cooper_and_bryant_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_terry_group_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_terry_group_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_terry_group_university,org_thompson_adams_and_spears_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_terry_group_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_terry_group_university,org_williams_garcia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_terry_group_university,org_wright_phillips_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_thompson_adams_and_spears_university,org_barber_weber_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_thompson_adams_and_spears_university,org_barry_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_thompson_robinson_and_warner_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_thompson_robinson_and_warner_university,org_crawford_smith_and_carroll_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_thompson_robinson_and_warner_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Robotics
+org_wade_lee_and_strickland_university,org_carpenter_llc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_wade_lee_and_strickland_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_wade_lee_and_strickland_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_wade_lee_and_strickland_university,org_johnson_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and NLP
+org_wade_lee_and_strickland_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_wade_lee_and_strickland_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_wade_lee_and_strickland_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_wade_lee_and_strickland_university,org_ramirez_kelly_and_collins_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_wade_lee_and_strickland_university,org_ruiz_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_wade_lee_and_strickland_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_wade_lee_and_strickland_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Computer Vision and Robotics
+org_wade_lee_and_strickland_university,org_smith_brown_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_wade_lee_and_strickland_university,org_solomon_inc_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_wade_lee_and_strickland_university,org_taylor_and_sons_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_wade_lee_and_strickland_university,org_terry_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_wade_lee_and_strickland_university,org_thompson_adams_and_spears_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Computer Vision work during breakout session
+org_williams_garcia_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_williams_garcia_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_williams_garcia_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_williams_garcia_university,org_scott_green_and_lopez_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_williams_garcia_university,org_thompson_adams_and_spears_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_wright_phillips_university,org_anderson_zimmerman_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_wright_phillips_university,org_clark_pham_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_wright_phillips_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_wright_phillips_university,org_johnson_atkinson_and_adams_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_wright_phillips_university,org_oneill_gregory_and_good_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_wright_phillips_university,org_ramos_roth_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_wright_phillips_university,org_rodgers_johnson_and_jenkins_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging NLP and Computer Vision
+org_wright_phillips_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and Computer Vision
+org_wright_phillips_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed NLP work during breakout session
+org_yates_carter_and_foley_university,org_fisher_robinson_and_evans_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_yates_carter_and_foley_university,org_miller_smith_university,connection,EVT-2025-AICONF,2025-09-10,1,Met at conference,Met during poster session bridging Robotics and NLP
+org_yates_carter_and_foley_university,org_sanchez_group_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_yates_carter_and_foley_university,org_wade_lee_and_strickland_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session
+org_yates_carter_and_foley_university,org_williams_garcia_university,connection,EVT-2025-AICONF,2025-09-10,1,Shared research interests,Discussed Robotics work during breakout session

@@ -1,11 +1,9 @@
 Id,Label,type,org_type,org_sector,city,state,country,event_date,event_id
 evt_evt_2025_001,Tutor/Mentor Spring Conference 2025,event,,,Chicago,IL,USA,2025-03-15,EVT-2025-001
-evt_evt_2025_002,Tutor/Mentor Summer Meetup 2025,event,,,Chicago,IL,USA,2025-07-20,EVT-2025-002
-evt_evt_2025_003,Tutor/Mentor Fall Summit 2025,event,,,EVANSTON,IL,USA,2025-10-05,EVT-2025-003
 org_city_schools_district,City Schools District,org,,Education,Chicago,IL,USA,,
 org_community_care,Community Care,org,,Non-profit,Chicago,IL,USA,,
 org_healthfirst_clinic,HealthFirst Clinic,org,,Health,Chicago,IL,USA,,
-org_iit_bombay,Iit Bombay,org,,Education,Chicago,IL,USA,,
+org_iit_bombay,IIT Bombay,org,,Education,Chicago,IL,USA,,
 org_metro_tech_hub,Metro Tech Hub,org,,Technology,Chicago,IL,USA,,
 org_neighborhood_center,Neighborhood Center,org,,Community,Chicago,IL,USA,,
 org_quantiphi,Quantiphi,org,,Business,Chicago,IL,USA,,

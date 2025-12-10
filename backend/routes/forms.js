@@ -12,12 +12,15 @@ const { protect, authorize } = require('../middleware/auth');
 
 // Public routes
 router.get('/', getForms);
-router.get('/:id', getForm);
 
-// Protected routes - require authentication
+// Protected routes - require authentication  
+// IMPORTANT: Specific routes must come before generic /:id route
 router.get('/admin/:adminId', protect, getFormsForAdmin);
 router.post('/', protect, createForm);
 router.put('/:id', protect, updateForm);
 router.delete('/:id', protect, deleteForm);
+
+// Generic routes (must be last to avoid matching everything)
+router.get('/:id', getForm);
 
 module.exports = router;
