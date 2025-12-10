@@ -837,5 +837,8 @@ def upload():
 
 
 if __name__ == "__main__":
-    # Use port 5002 to avoid conflict with macOS AirPlay Receiver (port 5000)
-    app.run(debug=True, port=5002)
+    # Use environment PORT for production (Render, Railway, etc.)
+    # Falls back to 5002 for local development (avoiding macOS AirPlay conflict)
+    port = int(os.environ.get("PORT", 5002))
+    debug_mode = os.environ.get("FLASK_ENV", "development") == "development"
+    app.run(host="0.0.0.0", port=port, debug=debug_mode)
