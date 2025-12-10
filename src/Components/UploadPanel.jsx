@@ -16,7 +16,7 @@ export default function UploadPanel() {
   // New state for enhanced features
   // const [forms, setForms] = useState([]); // Commented out - will be used when form fetching is re-enabled
   const [selectedForms, setSelectedForms] = useState([]);
-  const [loadingForms, setLoadingForms] = useState(true);
+  // const [loadingForms, setLoadingForms] = useState(true); // Commented out - used by disabled forms sidebar
   const [nodesPreview, setNodesPreview] = useState(null);
   const [edgesPreview, setEdgesPreview] = useState(null);
 
@@ -146,7 +146,8 @@ export default function UploadPanel() {
     setMapping(defaultMapping);
   };
 
-  // Toggle form selection
+  // Toggle form selection - DISABLED (forms sidebar commented out)
+  /*
   const toggleFormSelection = (formId) => {
     setSelectedForms(prev => {
       if (prev.includes(formId)) {
@@ -156,6 +157,7 @@ export default function UploadPanel() {
       }
     });
   };
+  */
 
   // Clear preview data
   const clearPreviews = () => {
