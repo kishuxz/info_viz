@@ -58,7 +58,7 @@ export default function UploadPanel() {
     };
     fetchForms();
     */
-    // setLoadingForms(false); // Skip form loading for now - DISABLED
+    // setLoadingForms(false); // DISABLED - variable is not declared
   }, []);
 
   // Handle file upload from input

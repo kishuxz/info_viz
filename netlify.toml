@@ -10,4 +10,6 @@
   status = 200
 
 # Environment variables (set these in Netlify dashboard)
-# REACT_APP_API_URL will be your backend URL after deployment
+# Required:
+#   REACT_APP_API_URL - Node.js backend API (e.g., https://your-backend.onrender.com/api)
+#   REACT_APP_NETWORK_API_URL - Flask network converter (e.g., https://your-flask.onrender.com)
