@@ -415,6 +415,219 @@
     color: #111827;
 }
 
+/* ===== GRAPH MODE SELECTOR ===== */
+.graph-mode-section {
+    margin-bottom: 32px;
+}
+
+.graph-mode-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+.graph-mode-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+}
+
+.graph-mode-option {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.graph-mode-option:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.graph-mode-option.active {
+    border-color: #2563eb;
+    background: #eff6ff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.graph-mode-option input[type="radio"] {
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+.mode-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mode-content strong {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.mode-content span {
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+/* ===== UPLOAD SECTION ===== */
+.upload-section {
+    margin-bottom: 32px;
+}
+
+.upload-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+/* ===== MAPPING WIZARD ===== */
+.mapping-wizard {
+    margin-bottom: 32px;
+    padding: 24px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+}
+
+.mapping-wizard h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.wizard-hint {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.standard-mapping {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mapping-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.mapping-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mapping-row label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.mapping-row.required label::after {
+    content: " *";
+    color: #dc2626;
+}
+
+.mapping-row select {
+    padding: 10px 12px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mapping-row select:hover {
+    border-color: #2563eb;
+}
+
+.mapping-row select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.custom-mapping {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Extra Attributes Section */
+.extra-attrs-section {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 2px solid #e5e7eb;
+}
+
+.extra-attrs-section h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.extra-attrs-section p {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.extra-attrs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.extra-attr-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: white;
+    border: 1.5px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 13px;
+    color: #374151;
+}
+
+.extra-attr-item:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.extra-attr-item input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+.convert-section {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
     .upload-panel-container {

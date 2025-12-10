@@ -89,18 +89,18 @@ function HomePage() {
 
     const autoScroll = () => {
       if (!isPaused) {
-        currentIndex = (currentIndex + 1) % 3;
+        currentIndex = (currentIndex + 1) % 8; // Updated for 8 cards total
         scrollToIndex(currentIndex);
       }
     };
 
     const handlePrev = () => {
-      const newIndex = (currentIndex - 1 + 3) % 3;
+      const newIndex = (currentIndex - 1 + 8) % 8; // Updated for 8 cards
       scrollToIndex(newIndex);
     };
 
     const handleNext = () => {
-      const newIndex = (currentIndex + 1) % 3;
+      const newIndex = (currentIndex + 1) % 8; // Updated for 8 cards
       scrollToIndex(newIndex);
     };
 
@@ -321,29 +321,126 @@ function HomePage() {
 
             <div className="examples-slider-container">
               <div className="examples-slider">
-                {/* Kumu Card */}
+                {/* Kumu Example 1 - Full Network */}
                 <div className="example-card-wrapper">
                   <div className="example-showcase-card">
                     <div className="example-showcase-image">
                       <img
-                        src="/assets/examples/kumu-network-example.png"
-                        alt="Kumu Network Visualization"
+                        src="/assets/examples/kumu-network-1.png"
+                        alt="Kumu Event-Sector-Org Full Network"
                       />
                       <div className="example-overlay">
-                        <h4 className="example-overlay-title">Kumu</h4>
+                        <h4 className="example-overlay-title">Full Network</h4>
                       </div>
                     </div>
                   </div>
                   <div className="example-card-details">
-                    <h4 className="example-detail-title">Kumu</h4>
+                    <h4 className="example-detail-title">Event→Sector→Org Network</h4>
                     <p className="example-detail-desc">
-                      Clean, colorful network maps with clusters showing community structure. Perfect for stakeholder presentations and interactive exploration.
+                      Complete 3-layer network showing how sectors connect different organizations at an event. Clean legend with distinct node types.
                     </p>
-                    <a href="/learn/export-guide" className="example-link">
-                      View guide →
-                    </a>
+                    <Link to="/examples" className="example-link">
+                      View All Examples →
+                    </Link>
                   </div>
                 </div>
+
+                {/* Kumu Example 2 - Sector Focus */}
+                <div className="example-card-wrapper">
+                  <div className="example-showcase-card">
+                    <div className="example-showcase-image">
+                      <img
+                        src="/assets/examples/kumu-network-2.png"
+                        alt="Kumu Sector-Focused View"
+                      />
+                      <div className="example-overlay">
+                        <h4 className="example-overlay-title">Sector View</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="example-card-details">
+                    <h4 className="example-detail-title">Sector-Focused Network</h4>
+                    <p className="example-detail-desc">
+                      Zoom in on how Research Sectors (NLP, Robotics, Computer Vision) group organizations with clear sector nodes.
+                    </p>
+                    <Link to="/examples" className="example-link">
+                      View All Examples →
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Kumu Example 3 - Cross-Sector Connections */}
+                <div className="example-card-wrapper">
+                  <div className="example-showcase-card">
+                    <div className="example-showcase-image">
+                      <img
+                        src="/assets/examples/kumu-network-3.png"
+                        alt="Kumu Cross-Sector Connections"
+                      />
+                      <div className="example-overlay">
+                        <h4 className="example-overlay-title">Cross-Sector</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="example-card-details">
+                    <h4 className="example-detail-title">Cross-Sector Connections</h4>
+                    <p className="example-detail-desc">
+                      Detailed view showing organizations linked through multiple sectors with connection types and meeting frequency.
+                    </p>
+                    <Link to="/examples" className="example-link">
+                      View All Examples →
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Kumu Example 4 - Edge Types */}
+                <div className="example-card-wrapper">
+                  <div className="example-showcase-card">
+                    <div className="example-showcase-image">
+                      <img
+                        src="/assets/examples/kumu-network-4.png"
+                        alt="Kumu Edge Type Visualization"
+                      />
+                      <div className="example-overlay">
+                        <h4 className="example-overlay-title">Edge Types</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="example-card-details">
+                    <h4 className="example-detail-title">Multi-Edge Network</h4>
+                    <p className="example-detail-desc">
+                      Advanced legend showing Event↔Sector and Sector↔Org connection types with color-coded edge styles.
+                    </p>
+                    <Link to="/examples" className="example-link">
+                      View All Examples →
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Kumu Example 5 - Alternative Color Scheme */}
+                <div className="example-card-wrapper">
+                  <div className="example-showcase-card">
+                    <div className="example-showcase-image">
+                      <img
+                        src="/assets/examples/kumu-network-5.png"
+                        alt="Kumu Alternative Color Scheme"
+                      />
+                      <div className="example-overlay">
+                        <h4 className="example-overlay-title">Custom Colors</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="example-card-details">
+                    <h4 className="example-detail-title">Custom Styling</h4>
+                    <p className="example-detail-desc">
+                      Same network with alternative color palette showing customization options for different presentation needs.
+                    </p>
+                    <Link to="/examples" className="example-link">
+                      View All Examples →
+                    </Link>
+                  </div>
+                </div>
+
 
                 {/* Gephi Card */}
                 <div className="example-card-wrapper">
@@ -363,9 +460,9 @@ function HomePage() {
                     <p className="example-detail-desc">
                       Force-directed layouts with advanced analytics. Ideal for academic research and deep network analysis with centrality measures.
                     </p>
-                    <a href="/learn/export-guide" className="example-link">
-                      View guide →
-                    </a>
+                    <Link to="/examples" className="example-link">
+                      View All Examples →
+                    </Link>
                   </div>
                 </div>
 
@@ -410,6 +507,11 @@ function HomePage() {
 
               <div className="slider-indicators">
                 <span className="indicator active"></span>
+                <span className="indicator"></span>
+                <span className="indicator"></span>
+                <span className="indicator"></span>
+                <span className="indicator"></span>
+                <span className="indicator"></span>
                 <span className="indicator"></span>
                 <span className="indicator"></span>
               </div>

@@ -8,6 +8,7 @@ import AnalyticsPage from "./Components/AnalyticsPage";
 import AdminDashboard from "./Components/AdminDashboard";
 import FormBuilderPage from "./Components/FormBuilderPage";
 import AdminOnlyMessage from "./Components/AdminOnlyMessage";
+import NetworkExamplesPage from "./Components/NetworkExamplesPage";
 import LoginPage from "./Components/LoginPage";
 import SignupPage from "./Components/SignupPage";
 import UploadPanel from "./Components/UploadPanel";
@@ -35,6 +36,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
+            <Route path="/examples" element={<NetworkExamplesPage />} />
             <Route path="/form" element={<FormPage />} />
             <Route path="/form/:id" element={<FormPage />} />
             <Route path="/split" element={<UploadPanel />} />
