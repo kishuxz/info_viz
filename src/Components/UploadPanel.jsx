@@ -280,7 +280,8 @@ export default function UploadPanel() {
 
   return (
     <div className="upload-panel-container">
-      {/* Sidebar for Forms */}
+      {/* Sidebar for Forms - TEMPORARILY DISABLED */}
+      {/* 
       <aside className="forms-sidebar">
         <h3>Your Forms</h3>
         {loadingForms ? (
@@ -316,6 +317,7 @@ export default function UploadPanel() {
           </div>
         )}
       </aside>
+      */}
 
       {/* Main Upload Area */}
       <main className="upload-main">
