@@ -703,12 +703,26 @@ def convert_many(infiles, outdir=OUTPUT_FOLDER, fmt="gephi", mapping=None, graph
             raise RuntimeError("custom_ab mode requires src_col and dst_col")
         nodes_df, edges_df = build_custom_edge_graph(df, src_col, dst_col, edge_label_col, mapping)
     elif graph_mode == "org_org":
-        # For org-org mode, we still use the same builder but might want to filter out event nodes
-        # For now, use the same logic - we can refine this later
         nodes_df, edges_df = build_graph_from_responses(df, mapping)
-        # Filter to only org nodes and org-org edges
+        # Only org nodes and org-org connection edges
         nodes_df = nodes_df[nodes_df["type"] == "org"]
         edges_df = edges_df[edges_df["edge_type"] == "connection"]
+    elif graph_mode == "org_event_only":
+        # Bipartite org↔event graph — no connection edges
+        nodes_df, edges_df = build_graph_from_responses(df, mapping)
+        edges_df = edges_df[edges_df["edge_type"] == "attendance"]
+    elif graph_mode == "org_connections_only":
+        # Pure org relationship network — only org nodes and connection edges
+        nodes_df, edges_df = build_graph_from_responses(df, mapping)
+        nodes_df = nodes_df[nodes_df["type"] == "org"]
+        edges_df = edges_df[edges_df["edge_type"] == "connection"]
+    elif graph_mode == "event_sector_org_attendance":
+        # Full 3-layer nodes (event/sector/org) but only attendance edges (no org-org connections)
+        nodes_df, edges_df = build_graph_from_responses(df, mapping)
+        edges_df = edges_df[edges_df["edge_type"] != "connection"]
+    elif graph_mode == "event_sector_org_connections":
+        # Full 3-layer network with all edge types (attendance + connections)
+        nodes_df, edges_df = build_graph_from_responses(df, mapping)
     else:  # org_event (default)
         nodes_df, edges_df = build_graph_from_responses(df, mapping)
 
@@ -824,10 +838,11 @@ def upload():
 
         msg = f"Converted ({n_nodes} nodes, {n_edges} edges) → format: {fmt.upper()}"
 
+        base = request.host_url.rstrip("/")
         return jsonify({
             "message": msg,
-            "nodes_url": f"http://127.0.0.1:5002/download/{nodes_file}",
-            "edges_url": f"http://127.0.0.1:5002/download/{edges_file}",
+            "nodes_url": f"{base}/download/{nodes_file}",
+            "edges_url": f"{base}/download/{edges_file}",
         }), 200
 
     except Exception as e:

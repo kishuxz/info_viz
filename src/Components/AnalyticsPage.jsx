@@ -197,7 +197,7 @@ function AnalyticsDashboard() {
     // global sector filter
     const [selectedSector, setSelectedSector] = useState("");
 
-    const NETWORK_API = 'https://mapping-analyzing-participation.onrender.com' || "http://127.0.0.1:5000";
+    const NETWORK_API = process.env.REACT_APP_NETWORK_API_URL || 'https://mapping-analyzing-participation.onrender.com';
 
     // network conversion (nodes/edges) state
     const [convertFormat, setConvertFormat] = useState("gephi");

@@ -1,5 +1,11 @@
 # NetworkMap - Event Network Visualization Platform
 
+![React](https://img.shields.io/badge/React-18-blue)
+![Node.js](https://img.shields.io/badge/Node.js-Express-green)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
+![Tests](https://img.shields.io/badge/Tests-Jest-yellow)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
 A full-stack web application for collecting, analyzing, and visualizing participant connections from events. Transform survey responses into interactive network graphs and analytics dashboards.
 
 ![Network Visualization](public/assets/hero-preview.png)
@@ -22,6 +28,38 @@ A full-stack web application for collecting, analyzing, and visualizing particip
 - Interactive learning modules about network analysis
 - Step-by-step guides for creating forms and analyzing data
 - Best practices for event network mapping
+
+## 📡 API Endpoints
+
+### Authentication
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| POST | `/api/auth/register` | Register new admin account | No |
+| POST | `/api/auth/login` | Login and receive JWT token | No |
+| POST | `/api/auth/logout` | Logout and blacklist token | Yes |
+
+### Forms
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| GET | `/api/forms` | Get all forms for admin | Yes |
+| POST | `/api/forms` | Create a new event form | Yes |
+| GET | `/api/forms/:id` | Get a specific form by ID | No |
+| PUT | `/api/forms/:id` | Update a form | Yes |
+| DELETE | `/api/forms/:id` | Delete a form | Yes |
+
+### Responses
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| POST | `/api/responses/:formId` | Submit a form response | No |
+| GET | `/api/responses/:formId` | Get all responses for a form | Yes |
+| GET | `/api/responses/:formId/export` | Export responses as CSV | Yes |
+
+### Analytics
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| GET | `/api/analytics/:formId` | Get network analytics for a form | Yes |
+
+> All authenticated endpoints require `Authorization: Bearer <token>` header.
 
 ## 🛠️ Tech Stack
 
@@ -240,6 +278,10 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 Built for event organizers, researchers, and community builders who want to understand and visualize organizational networks.
+
+## 🗄️ Database
+
+This project uses **MongoDB** in production for flexibility during rapid development. A full **PostgreSQL relational schema** is available in [`schema.sql`](./schema.sql) for teams requiring relational database support, including normalized tables for users, forms, responses, connections, and token blacklisting with proper indexing and foreign key constraints.
 
 ---
 

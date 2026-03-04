@@ -526,7 +526,7 @@ export default function UploadPanel() {
                       </select>
                     </div>
 
-                    {graphMode === "org_event" && (
+                    {["org_event", "event_sector_org_connections", "event_sector_org_attendance", "org_event_only"].includes(graphMode) && (
                       <>
                         <div className="mapping-row required">
                           <label>Event ID:</label>
